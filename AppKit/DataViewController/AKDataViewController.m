@@ -12,7 +12,7 @@
 #import "AKTableViewCellAdapter.h"
 #import "AKTableViewCellAdapterCache.h"
 
-@interface AKDataViewController () <UITableViewDelegate, UITableViewDataSource, AKStream>
+@interface AKDataViewController () <UITableViewDelegate, UITableViewDataSource>
 
 # pragma mark - Data structurs for data
 @property (nonatomic) AKStream *stream;
