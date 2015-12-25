@@ -9,8 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @class AKTableViewCellAdapter;
+@class AKStream;
 
-@interface AKDataViewController : UIViewController
+@protocol AKDataViewController
+
+@property (nonatomic) AKStream *stream;
+
+- (void)streamDidUpdate;
+
+@end
+
+@interface AKDataViewController : UIViewController <AKDataViewController>
+
+@property (nonatomic) AKStream *stream;
 
 - (void)registerItem:(id)item withAdapter:(AKTableViewCellAdapter *)adapter;
 

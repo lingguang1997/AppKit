@@ -15,7 +15,6 @@
 @interface AKDataViewController () <UITableViewDelegate, UITableViewDataSource>
 
 # pragma mark - Data structurs for data
-@property (nonatomic) AKStream *stream;
 @property (nonatomic) AKTableViewCellAdapterCache *cache;
 
 # pragma mark - UI
