@@ -8,13 +8,14 @@
 
 #import <objc/runtime.h>
 #import "AKDataViewController.h"
+#import "AKStream.h"
 #import "AKTableViewCellAdapter.h"
 #import "AKTableViewCellAdapterCache.h"
 
-@interface AKDataViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface AKDataViewController () <UITableViewDelegate, UITableViewDataSource, AKStream>
 
 # pragma mark - Data structurs for data
-@property (nonatomic) NSMutableArray *data; // a 2d array
+@property (nonatomic) AKStream *stream;
 @property (nonatomic) AKTableViewCellAdapterCache *cache;
 
 # pragma mark - UI
@@ -30,6 +31,9 @@
     [super viewDidLoad];
     _cache = [AKTableViewCellAdapterCache new];
     _tableView = [UITableView new];
+
+    _stream = [AKStream new];
+    [_stream update];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -56,22 +60,28 @@
 # pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return _data.count;
+    return _stream.streamItems.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[_data objectAtIndex:section] count];
+    return [[_stream.streamItems objectAtIndex:section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [[self _adapterWithIndexPath:indexPath] tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
+# pragma mark - AKStream
+
+- (void)streamDidUpdate {
+    [_tableView reloadData];
+}
+
 # pragma mark - Helpers
 
 - (AKTableViewCellAdapter *)_adapterWithIndexPath:(NSIndexPath *)indexPath {
-    assert(_data[indexPath.section][indexPath.row]);
-    id item = _data[indexPath.section][indexPath.row];
+    assert(_stream.streamItems[indexPath.section][indexPath.row]);
+    id item = _stream.streamItems[indexPath.section][indexPath.row];
     return [_cache adapterForItemClass:[item class]];
 }
 
