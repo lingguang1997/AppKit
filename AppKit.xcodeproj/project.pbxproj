@@ -25,6 +25,7 @@
 		CE57CD181C2C3CF600C584D4 /* AKStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CD161C2C3CF600C584D4 /* AKStream.m */; };
 		CE57CD1C1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CD1B1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m */; };
 		CE57CD1D1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CD1B1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m */; };
+		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CE8BA1691C2D6A5B009CAD86 /* AKStream.h in CopyFiles */,
 				CE57CD0B1C29957F00C584D4 /* AKDataViewController.h in CopyFiles */,
 				CE57CD0C1C29957F00C584D4 /* AKTableViewCellAdapter.h in CopyFiles */,
 				CE57CD0D1C29957F00C584D4 /* AKTableViewCellAdapterCache.h in CopyFiles */,
