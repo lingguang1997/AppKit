@@ -53,7 +53,7 @@
 # pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self _adapterWithIndexPath:indexPath] tableView:tableView heightForRowAtIndexPath:indexPath];
+    return [[self _adapterWithIndexPath:indexPath] tableView:tableView item:[self _itemAtIndexPath:indexPath] heightForRowAtIndexPath:indexPath];
 }
 
 # pragma mark - UITableViewDataSource
@@ -67,7 +67,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self _adapterWithIndexPath:indexPath] tableView:tableView cellForRowAtIndexPath:indexPath];
+    return [[self _adapterWithIndexPath:indexPath] tableView:tableView item:[self _itemAtIndexPath:indexPath] cellForRowAtIndexPath:indexPath];
 }
 
 # pragma mark - AKStream
@@ -76,11 +76,16 @@
     [_tableView reloadData];
 }
 
-# pragma mark - Helpers
+# pragma mark - Private Methods
+
+- (id)_itemAtIndexPath:(NSIndexPath *)indexPath {
+    id item = _stream.streamItems[indexPath.section][indexPath.row];
+    assert(item);
+    return item;
+}
 
 - (AKTableViewCellAdapter *)_adapterWithIndexPath:(NSIndexPath *)indexPath {
-    assert(_stream.streamItems[indexPath.section][indexPath.row]);
-    id item = _stream.streamItems[indexPath.section][indexPath.row];
+    id item = [self _itemAtIndexPath:indexPath];
     return [_cache adapterForItemClass:[item class]];
 }
 
