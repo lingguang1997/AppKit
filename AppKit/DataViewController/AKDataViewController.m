@@ -26,9 +26,16 @@
 
 # pragma mark - View controller life cycle
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _cache = [AKTableViewCellAdapterCache new];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _cache = [AKTableViewCellAdapterCache new];
     _tableView = [UITableView new];
     [self.view addSubview:_tableView];
     _tableView.delegate = self;
