@@ -40,7 +40,7 @@
     _tableView.frame = self.view.bounds;
 }
 
-- (void)registerItem:(id)item withAdapter:(AKTableViewCellAdapter *)adapter {
+- (void)registerAdapter:(AKTableViewCellAdapter *)adapter forItem:(id)item {
     assert(item);
     id itemClass = object_getClass(item);
     if (class_isMetaClass(itemClass)) {

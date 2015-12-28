@@ -13,7 +13,7 @@
 
 @protocol AKDataViewController
 
-@property (nonatomic) AKStream *stream;
+@property (nonatomic, nonnull) AKStream *stream;
 
 - (void)streamDidUpdate;
 
@@ -21,8 +21,8 @@
 
 @interface AKDataViewController : UIViewController <AKDataViewController>
 
-@property (nonatomic) AKStream *stream;
+@property (nonatomic, nonnull) AKStream *stream;
 
-- (void)registerItem:(id)item withAdapter:(AKTableViewCellAdapter *)adapter;
+- (void)registerAdapter:(nonnull AKTableViewCellAdapter *)adapter forItem:(nonnull id)item;
 
 @end
