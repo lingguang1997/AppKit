@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AKStreamDelegate <NSObject>
+
+- (void)streamDidUpdate;
+
+@end
+
 @interface AKStream : NSObject
 
 @property (nonatomic) NSTimeInterval updateInterval;
-@property (nonatomic, readonly) NSArray *streamItems;
+@property (nonatomic, readonly, nullable) NSArray *streamItems;
+@property (nonatomic, weak, nullable) id<AKStreamDelegate> delegate;
 
 - (BOOL)shouldPoll;
 - (void)startPolling;

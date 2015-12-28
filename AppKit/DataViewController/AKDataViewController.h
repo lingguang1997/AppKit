@@ -7,17 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AKStream.h"
 
 @class AKTableViewCellAdapter;
-@class AKStream;
 
-@protocol AKDataViewController
-
-- (void)streamDidUpdate;
-
-@end
-
-@interface AKDataViewController : UIViewController <AKDataViewController>
+@interface AKDataViewController : UIViewController <AKStreamDelegate>
 
 - (nonnull AKStream *)stream;
 - (void)registerAdapter:(nonnull AKTableViewCellAdapter *)adapter forItem:(nonnull id)item;
