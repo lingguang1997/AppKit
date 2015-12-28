@@ -17,7 +17,7 @@
 @interface AKStream : NSObject
 
 @property (nonatomic) NSTimeInterval updateInterval;
-@property (nonatomic, readonly, nullable) NSArray *streamItems;
+@property (nonatomic, nullable) NSArray *streamItems;
 @property (nonatomic, weak, nullable) id<AKStreamDelegate> delegate;
 
 - (BOOL)shouldPoll;
