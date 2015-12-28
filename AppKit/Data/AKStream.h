@@ -21,6 +21,7 @@
 @property (nonatomic, weak, nullable) id<AKStreamDelegate> delegate;
 
 - (BOOL)shouldPoll;
+- (BOOL)isPolling;
 - (void)startPolling;
 - (void)stopPolling;
 - (void)update;

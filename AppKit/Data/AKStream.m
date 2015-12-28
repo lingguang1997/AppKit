@@ -23,21 +23,29 @@ static const NSTimeInterval kDefaultUpdateInterval = 5 * 60;
     self = [super init];
     if (self) {
         _updateInterval = kDefaultUpdateInterval;
-        [self startPolling];
     }
     return self;
 }
 
 - (void)setUpdateInterval:(NSTimeInterval)updateInterval {
     if (updateInterval >= 0 && updateInterval != _updateInterval) {
-        [self stopPolling];
+        BOOL isPolling = [self isPolling];
+        if (isPolling) {
+            [self stopPolling];
+        }
         _updateInterval = updateInterval;
-        [self startPolling];
+        if (isPolling) {
+            [self startPolling];
+        }
     }
 }
 
 - (BOOL)shouldPoll {
     return YES;
+}
+
+- (BOOL)isPolling {
+    return !!_timer;
 }
 
 - (void)startPolling {
@@ -54,8 +62,7 @@ static const NSTimeInterval kDefaultUpdateInterval = 5 * 60;
 }
 
 - (void)update {
+    // should be overridden
 }
-
-# pragma mark - Private methods
 
 @end
