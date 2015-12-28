@@ -9,6 +9,7 @@
 #import <objc/runtime.h>
 #import "AKDataViewController.h"
 #import "AKStream.h"
+#import "AKTableViewCell.h"
 #import "AKTableViewCellAdapter.h"
 #import "AKTableViewCellAdapterCache.h"
 
@@ -76,8 +77,14 @@
     return [[[self stream].streamItems objectAtIndex:section] count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self _adapterWithIndexPath:indexPath] tableView:tableView item:[self _itemAtIndexPath:indexPath] cellForRowAtIndexPath:indexPath];
+- (UITableViewCell<AKTableViewCell> *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    id item = [self _itemAtIndexPath:indexPath];
+    UITableViewCell<AKTableViewCell> *cell = [_tableView dequeueReusableCellWithIdentifier:NSStringFromClass([item class])];
+    if (!cell) {
+        cell = [[self _adapterWithIndexPath:indexPath] tableView:tableView item:item cellForRowAtIndexPath:indexPath];
+    }
+    [cell updateWithItem:item];
+    return cell;
 }
 
 # pragma mark - AKStream

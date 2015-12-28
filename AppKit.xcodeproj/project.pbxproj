@@ -56,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTableViewCell.h; sourceTree = "<group>"; };
 		CE57CC931C295B9000C584D4 /* libAppKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE57CC961C295B9000C584D4 /* AppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppKit.h; sourceTree = "<group>"; };
 		CE57CC981C295B9000C584D4 /* AppKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppKit.m; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 			children = (
 				CE57CCAF1C295C7800C584D4 /* AKDataViewController.h */,
 				CE57CCB01C295C7800C584D4 /* AKDataViewController.m */,
+				CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */,
 				CE57CCB11C295C7800C584D4 /* AKTableViewCellAdapter.h */,
 				CE57CCB21C295C7800C584D4 /* AKTableViewCellAdapter.m */,
 				CE57CCB31C295C7800C584D4 /* AKTableViewCellAdapterCache.h */,

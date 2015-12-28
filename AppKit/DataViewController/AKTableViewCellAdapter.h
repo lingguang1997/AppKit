@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "AKTableViewCell.h"
 
 @interface AKTableViewCellAdapter : NSObject
 
 - (CGFloat)tableView:(UITableView *)tableView item:(id)item heightForRowAtIndexPath:(NSIndexPath *)indexPath;
-- (UITableViewCell *)tableView:(UITableView *)tableView item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (UITableViewCell<AKTableViewCell> *)tableView:(UITableView *)tableView item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
