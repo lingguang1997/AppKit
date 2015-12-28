@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */; };
 		CE57CC971C295B9000C584D4 /* AppKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE57CC961C295B9000C584D4 /* AppKit.h */; };
 		CE57CC991C295B9000C584D4 /* AppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CC981C295B9000C584D4 /* AppKit.m */; };
 		CE57CCA61C295C4C00C584D4 /* AppKitUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CCA51C295C4C00C584D4 /* AppKitUnitTests.m */; };
@@ -45,6 +46,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in CopyFiles */,
 				CE8BA1691C2D6A5B009CAD86 /* AKStream.h in CopyFiles */,
 				CE57CD0B1C29957F00C584D4 /* AKDataViewController.h in CopyFiles */,
 				CE57CD0C1C29957F00C584D4 /* AKTableViewCellAdapter.h in CopyFiles */,
