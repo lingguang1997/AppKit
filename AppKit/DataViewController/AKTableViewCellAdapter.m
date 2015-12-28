@@ -11,15 +11,15 @@
 
 @implementation AKTableViewCellAdapter
 
-- (CGFloat)tableView:(UITableView *)tableView item:(id)item heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)dataViewController:(nonnull AKDataViewController *)dataViewController item:(id)item heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44;
 }
 
-- (UITableViewCell<AKTableViewCell> *)tableView:(UITableView *)tableView item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell<AKTableViewCell> *)dataViewController:(nonnull AKDataViewController *)dataViewController item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return nil;
 }
 
-- (void)tableView:(nonnull UITableView *)tableView item:(nonnull id)item didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+- (void)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id)item didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     // should be overridden
 }
 

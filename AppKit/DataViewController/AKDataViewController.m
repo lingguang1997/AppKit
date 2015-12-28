@@ -75,11 +75,11 @@
 # pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self _adapterWithIndexPath:indexPath] tableView:tableView item:[self _itemAtIndexPath:indexPath] heightForRowAtIndexPath:indexPath];
+    return [[self _adapterWithIndexPath:indexPath] dataViewController:self item:[self _itemAtIndexPath:indexPath] heightForRowAtIndexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self _adapterWithIndexPath:indexPath] tableView:tableView item:[self _itemAtIndexPath:indexPath] didSelectRowAtIndexPath:indexPath];
+    return [[self _adapterWithIndexPath:indexPath] dataViewController:self item:[self _itemAtIndexPath:indexPath] didSelectRowAtIndexPath:indexPath];
 }
 
 # pragma mark - UITableViewDataSource
@@ -96,7 +96,7 @@
     id item = [self _itemAtIndexPath:indexPath];
     UITableViewCell<AKTableViewCell> *cell = [_tableView dequeueReusableCellWithIdentifier:NSStringFromClass([item class])];
     if (!cell) {
-        cell = [[self _adapterWithIndexPath:indexPath] tableView:tableView item:item cellForRowAtIndexPath:indexPath];
+        cell = [[self _adapterWithIndexPath:indexPath] dataViewController:self item:item cellForRowAtIndexPath:indexPath];
     }
     [cell updateWithItem:item];
     return cell;
