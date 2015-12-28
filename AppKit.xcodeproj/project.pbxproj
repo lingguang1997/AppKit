@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */; };
+		CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */; };
+		CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */; };
 		CE57CC971C295B9000C584D4 /* AppKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE57CC961C295B9000C584D4 /* AppKit.h */; };
 		CE57CC991C295B9000C584D4 /* AppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CC981C295B9000C584D4 /* AppKit.m */; };
 		CE57CCA61C295C4C00C584D4 /* AppKitUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CCA51C295C4C00C584D4 /* AppKitUnitTests.m */; };
@@ -46,6 +48,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in CopyFiles */,
 				CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in CopyFiles */,
 				CE8BA1691C2D6A5B009CAD86 /* AKStream.h in CopyFiles */,
 				CE57CD0B1C29957F00C584D4 /* AKDataViewController.h in CopyFiles */,
@@ -59,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTableViewCell.h; sourceTree = "<group>"; };
+		CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SpiralPullToRefresh.h"; sourceTree = "<group>"; };
+		CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SpiralPullToRefresh.m"; sourceTree = "<group>"; };
 		CE57CC931C295B9000C584D4 /* libAppKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE57CC961C295B9000C584D4 /* AppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppKit.h; sourceTree = "<group>"; };
 		CE57CC981C295B9000C584D4 /* AppKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppKit.m; sourceTree = "<group>"; };
@@ -97,6 +102,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE3E8AD01C31439C0016DCDC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E8AD11C31439C0016DCDC /* PullToRefresh */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CE3E8AD11C31439C0016DCDC /* PullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */,
+				CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */,
+			);
+			path = PullToRefresh;
+			sourceTree = "<group>";
+		};
 		CE57CC8A1C295B9000C584D4 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +140,7 @@
 		CE57CC951C295B9000C584D4 /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				CE3E8AD01C31439C0016DCDC /* Components */,
 				CE57CD191C2CBC3600C584D4 /* Utilities */,
 				CE57CD141C2C3CE300C584D4 /* Data */,
 				CE57CCAE1C295C7800C584D4 /* DataViewController */,
@@ -271,6 +294,7 @@
 				CE57CCB71C295C7800C584D4 /* AKDataViewController.m in Sources */,
 				CE57CD1C1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */,
 				CE57CC991C295B9000C584D4 /* AppKit.m in Sources */,
+				CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

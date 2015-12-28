@@ -12,6 +12,7 @@
 #import "AKTableViewCell.h"
 #import "AKTableViewCellAdapter.h"
 #import "AKTableViewCellAdapterCache.h"
+#import "UIScrollView+SpiralPullToRefresh.h"
 
 @interface AKDataViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -44,6 +45,16 @@
     if ([[self stream] shouldPoll]) {
         [[self stream] startPolling];
     }
+
+    self.navigationController.navigationBar.translucent = NO;
+
+    __weak typeof(self) weakSelf = self;
+    [_tableView addPullToRefreshWithActionHandler:^{
+        int64_t delayInSeconds = 1;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.stream update];
+        });
+    }];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -90,6 +101,7 @@
 # pragma mark - AKStream
 
 - (void)streamDidUpdate {
+    [self.tableView.pullToRefreshController didFinishRefresh];
     [_tableView reloadData];
 }
 
