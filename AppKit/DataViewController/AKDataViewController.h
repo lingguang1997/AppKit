@@ -14,6 +14,6 @@
 @interface AKDataViewController : UIViewController <AKStreamDelegate>
 
 - (nonnull AKStream *)stream;
-- (void)registerAdapter:(nonnull AKTableViewCellAdapter *)adapter forItem:(nonnull id)item;
+- (void)registerAdapter:(nonnull AKTableViewCellAdapter *)adapter forItemClass:(nonnull id)itemClass;
 
 @end

@@ -55,14 +55,9 @@
     return nil;
 }
 
-- (void)registerAdapter:(AKTableViewCellAdapter *)adapter forItem:(id)item {
-    assert(item);
-    id itemClass = object_getClass(item);
-    if (class_isMetaClass(itemClass)) {
-        [_cache registerAdapter:adapter forItemClass:itemClass];
-    } else {
-        [_cache registerAdapter:adapter forItemClass:[item class]];
-    }
+- (void)registerAdapter:(nonnull AKTableViewCellAdapter *)adapter forItemClass:(nonnull id)itemClass {
+    assert(itemClass);
+    [_cache registerAdapter:adapter forItemClass:itemClass];
 }
 
 # pragma mark - UITableViewDelegate
