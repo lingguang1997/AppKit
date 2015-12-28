@@ -30,6 +30,9 @@
     [super viewDidLoad];
     _cache = [AKTableViewCellAdapterCache new];
     _tableView = [UITableView new];
+    if ([[self stream] shouldPoll]) {
+        [[self stream] startPolling];
+    }
 }
 
 - (void)viewDidLayoutSubviews {

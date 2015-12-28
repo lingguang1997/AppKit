@@ -13,6 +13,7 @@
 @property (nonatomic) NSTimeInterval updateInterval;
 @property (nonatomic, readonly) NSArray *streamItems;
 
+- (BOOL)shouldPoll;
 - (void)startPolling;
 - (void)stopPolling;
 - (void)update;

@@ -36,6 +36,10 @@ static const NSTimeInterval kDefaultUpdateInterval = 5 * 60;
     }
 }
 
+- (BOOL)shouldPoll {
+    return YES;
+}
+
 - (void)startPolling {
     __weak AKStream *weakSelf = self;
     _timer = [NSTimer ak_scheduledTimerWithTimeInterval:_updateInterval block:[^{
