@@ -30,14 +30,16 @@
     [super viewDidLoad];
     _cache = [AKTableViewCellAdapterCache new];
     _tableView = [UITableView new];
-
-    _stream = [AKStream new];
-    [_stream update];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     _tableView.frame = self.view.bounds;
+}
+
+- (AKStream *)stream {
+    // should be overriden
+    return nil;
 }
 
 - (void)registerAdapter:(AKTableViewCellAdapter *)adapter forItem:(id)item {
@@ -59,11 +61,11 @@
 # pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return _stream.streamItems.count;
+    return [self stream].streamItems.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[_stream.streamItems objectAtIndex:section] count];
+    return [[[self stream].streamItems objectAtIndex:section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -79,7 +81,7 @@
 # pragma mark - Private Methods
 
 - (id)_itemAtIndexPath:(NSIndexPath *)indexPath {
-    id item = _stream.streamItems[indexPath.section][indexPath.row];
+    id item = [self stream].streamItems[indexPath.section][indexPath.row];
     assert(item);
     return item;
 }
