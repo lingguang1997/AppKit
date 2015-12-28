@@ -78,6 +78,10 @@
     return [[self _adapterWithIndexPath:indexPath] tableView:tableView item:[self _itemAtIndexPath:indexPath] heightForRowAtIndexPath:indexPath];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [[self _adapterWithIndexPath:indexPath] tableView:tableView item:[self _itemAtIndexPath:indexPath] didSelectRowAtIndexPath:indexPath];
+}
+
 # pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

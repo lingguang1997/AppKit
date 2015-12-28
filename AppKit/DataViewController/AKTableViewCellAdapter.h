@@ -11,7 +11,8 @@
 
 @interface AKTableViewCellAdapter : NSObject
 
-- (CGFloat)tableView:(UITableView *)tableView item:(id)item heightForRowAtIndexPath:(NSIndexPath *)indexPath;
-- (UITableViewCell<AKTableViewCell> *)tableView:(UITableView *)tableView item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)tableView:(nonnull UITableView *)tableView item:(nonnull id)item heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
+- (nonnull UITableViewCell<AKTableViewCell> *)tableView:(nonnull UITableView *)tableView item:(nonnull id)item cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
+- (void)tableView:(nonnull UITableView *)tableView item:(nonnull id)item didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
 
 @end

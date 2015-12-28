@@ -12,7 +12,7 @@
 
 @interface AKTableViewCellAdapterCache : NSObject
 
-- (void)registerAdapter:(AKTableViewCellAdapter *)adapter forItemClass:(id)itemClass;
-- (AKTableViewCellAdapter *)adapterForItemClass:(id)itemClass;
+- (void)registerAdapter:(nonnull AKTableViewCellAdapter *)adapter forItemClass:(nonnull id)itemClass;
+- (nullable AKTableViewCellAdapter *)adapterForItemClass:(nonnull id)itemClass;
 
 @end

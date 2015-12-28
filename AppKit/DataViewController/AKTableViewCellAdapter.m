@@ -19,4 +19,8 @@
     return nil;
 }
 
+- (void)tableView:(nonnull UITableView *)tableView item:(nonnull id)item didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    // should be overridden
+}
+
 @end
