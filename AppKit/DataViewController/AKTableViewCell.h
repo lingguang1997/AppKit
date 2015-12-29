@@ -12,6 +12,6 @@
 @protocol AKTableViewCell <NSObject>
 
 - (void)updateWithItem:(nonnull id)item;
-+ (CGFloat)heightForItem:(nonnull id)item fixeWidth:(CGFloat)fixedWidth;
++ (CGFloat)heightForItem:(nonnull id)item fixedWidth:(CGFloat)fixedWidth;
 
 @end
