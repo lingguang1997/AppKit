@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */; };
+		CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */; };
 		CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */; };
-		CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */; };
-		CE57CC971C295B9000C584D4 /* AppKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE57CC961C295B9000C584D4 /* AppKit.h */; };
+		CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */; };
+		CE46E85D1C324B890075CA29 /* NSString+AKDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46E85C1C324B890075CA29 /* NSString+AKDrawing.m */; };
+		CE46E85E1C324DE70075CA29 /* NSString+AKDrawing.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE46E85B1C324B890075CA29 /* NSString+AKDrawing.h */; };
+		CE57CC971C295B9000C584D4 /* AppKit.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CC961C295B9000C584D4 /* AppKit.h */; };
 		CE57CC991C295B9000C584D4 /* AppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CC981C295B9000C584D4 /* AppKit.m */; };
 		CE57CCA61C295C4C00C584D4 /* AppKitUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CCA51C295C4C00C584D4 /* AppKitUnitTests.m */; };
 		CE57CCA81C295C4C00C584D4 /* libAppKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE57CC931C295B9000C584D4 /* libAppKit.a */; };
@@ -21,14 +23,14 @@
 		CE57CCBC1C295C8200C584D4 /* AKTableViewCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CCB21C295C7800C584D4 /* AKTableViewCellAdapter.m */; };
 		CE57CCBD1C295C8200C584D4 /* AKTableViewCellAdapterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CCB41C295C7800C584D4 /* AKTableViewCellAdapterCache.m */; };
 		CE57CCBE1C295E5000C584D4 /* AKTableViewCellAdapterCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CCB61C295C7800C584D4 /* AKTableViewCellAdapterCacheTest.m */; };
-		CE57CD0B1C29957F00C584D4 /* AKDataViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE57CCAF1C295C7800C584D4 /* AKDataViewController.h */; };
-		CE57CD0C1C29957F00C584D4 /* AKTableViewCellAdapter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE57CCB11C295C7800C584D4 /* AKTableViewCellAdapter.h */; };
-		CE57CD0D1C29957F00C584D4 /* AKTableViewCellAdapterCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE57CCB31C295C7800C584D4 /* AKTableViewCellAdapterCache.h */; };
+		CE57CD0B1C29957F00C584D4 /* AKDataViewController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CCAF1C295C7800C584D4 /* AKDataViewController.h */; };
+		CE57CD0C1C29957F00C584D4 /* AKTableViewCellAdapter.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CCB11C295C7800C584D4 /* AKTableViewCellAdapter.h */; };
+		CE57CD0D1C29957F00C584D4 /* AKTableViewCellAdapterCache.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CCB31C295C7800C584D4 /* AKTableViewCellAdapterCache.h */; };
 		CE57CD171C2C3CF600C584D4 /* AKStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CD161C2C3CF600C584D4 /* AKStream.m */; };
 		CE57CD181C2C3CF600C584D4 /* AKStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CD161C2C3CF600C584D4 /* AKStream.m */; };
 		CE57CD1C1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CD1B1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m */; };
 		CE57CD1D1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CD1B1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m */; };
-		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
+		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,20 +44,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CE57CC911C295B9000C584D4 /* CopyFiles */ = {
+		CE57CC911C295B9000C584D4 /* Copy Files (8 items) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in CopyFiles */,
-				CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in CopyFiles */,
-				CE8BA1691C2D6A5B009CAD86 /* AKStream.h in CopyFiles */,
-				CE57CD0B1C29957F00C584D4 /* AKDataViewController.h in CopyFiles */,
-				CE57CD0C1C29957F00C584D4 /* AKTableViewCellAdapter.h in CopyFiles */,
-				CE57CD0D1C29957F00C584D4 /* AKTableViewCellAdapterCache.h in CopyFiles */,
-				CE57CC971C295B9000C584D4 /* AppKit.h in CopyFiles */,
+				CE46E85E1C324DE70075CA29 /* NSString+AKDrawing.h in Copy Files (8 items) */,
+				CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in Copy Files (8 items) */,
+				CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in Copy Files (8 items) */,
+				CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */,
+				CE57CD0B1C29957F00C584D4 /* AKDataViewController.h in Copy Files (8 items) */,
+				CE57CD0C1C29957F00C584D4 /* AKTableViewCellAdapter.h in Copy Files (8 items) */,
+				CE57CD0D1C29957F00C584D4 /* AKTableViewCellAdapterCache.h in Copy Files (8 items) */,
+				CE57CC971C295B9000C584D4 /* AppKit.h in Copy Files (8 items) */,
 			);
+			name = "Copy Files (8 items)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -64,6 +68,8 @@
 		CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTableViewCell.h; sourceTree = "<group>"; };
 		CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SpiralPullToRefresh.h"; sourceTree = "<group>"; };
 		CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SpiralPullToRefresh.m"; sourceTree = "<group>"; };
+		CE46E85B1C324B890075CA29 /* NSString+AKDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AKDrawing.h"; sourceTree = "<group>"; };
+		CE46E85C1C324B890075CA29 /* NSString+AKDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AKDrawing.m"; sourceTree = "<group>"; };
 		CE57CC931C295B9000C584D4 /* libAppKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE57CC961C295B9000C584D4 /* AppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppKit.h; sourceTree = "<group>"; };
 		CE57CC981C295B9000C584D4 /* AppKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppKit.m; sourceTree = "<group>"; };
@@ -196,6 +202,8 @@
 			children = (
 				CE57CD1A1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.h */,
 				CE57CD1B1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m */,
+				CE46E85B1C324B890075CA29 /* NSString+AKDrawing.h */,
+				CE46E85C1C324B890075CA29 /* NSString+AKDrawing.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -209,7 +217,7 @@
 			buildPhases = (
 				CE57CC8F1C295B9000C584D4 /* Sources */,
 				CE57CC901C295B9000C584D4 /* Frameworks */,
-				CE57CC911C295B9000C584D4 /* CopyFiles */,
+				CE57CC911C295B9000C584D4 /* Copy Files (8 items) */,
 			);
 			buildRules = (
 			);
@@ -290,6 +298,7 @@
 			files = (
 				CE57CD171C2C3CF600C584D4 /* AKStream.m in Sources */,
 				CE57CCB91C295C7800C584D4 /* AKTableViewCellAdapterCache.m in Sources */,
+				CE46E85D1C324B890075CA29 /* NSString+AKDrawing.m in Sources */,
 				CE57CCB81C295C7800C584D4 /* AKTableViewCellAdapter.m in Sources */,
 				CE57CCB71C295C7800C584D4 /* AKDataViewController.m in Sources */,
 				CE57CD1C1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */,
