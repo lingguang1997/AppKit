@@ -10,11 +10,7 @@
 
 @interface AKCollectionViewController : NSObject <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic) CGRect frame;
 @property (nonatomic, readonly, nonnull) UICollectionView *collectionView;
 @property (nonatomic, nonnull) NSArray *data;
-
-- (nonnull instancetype)init NS_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame NS_DESIGNATED_INITIALIZER;
 
 @end

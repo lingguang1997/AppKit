@@ -12,8 +12,8 @@
 
 @implementation AKCollectionViewLineLayoutController
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+- (instancetype)init {
+    self = [super init];
     if (self) {
         self.collectionView.collectionViewLayout = [[AKCollectionViewLineLayout alloc] initWithDelegate:self];
     }
@@ -23,7 +23,7 @@
 # pragma mark - AKCollectionViewLineLayoutDelegate
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView heightForItemAtIndexPath:(NSIndexPath *)indexPath withWidth:(CGFloat)width {
-    return CGRectGetHeight(self.frame);
+    return CGRectGetHeight(self.collectionView.frame);
 }
 
 @end

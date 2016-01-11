@@ -10,12 +10,11 @@
 
 @implementation AKCollectionViewController
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)init {
     self = [super init];
     if (self) {
-        _frame = frame;
         _data = [NSMutableArray array];
-        _collectionView = [[UICollectionView alloc] initWithFrame:_frame];
+        _collectionView = [UICollectionView new];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
     }
