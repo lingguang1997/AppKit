@@ -30,6 +30,16 @@
 		CE57CD181C2C3CF600C584D4 /* AKStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CD161C2C3CF600C584D4 /* AKStream.m */; };
 		CE57CD1C1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CD1B1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m */; };
 		CE57CD1D1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57CD1B1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m */; };
+		CE57D4451C42999800DB72C4 /* AKCollectionViewPinterestLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D4441C42999800DB72C4 /* AKCollectionViewPinterestLayout.m */; };
+		CE57D4461C42999800DB72C4 /* AKCollectionViewPinterestLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D4441C42999800DB72C4 /* AKCollectionViewPinterestLayout.m */; };
+		CE57D44D1C43553D00DB72C4 /* AKCollectionViewLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D44C1C43553D00DB72C4 /* AKCollectionViewLineLayout.m */; };
+		CE57D44E1C43553D00DB72C4 /* AKCollectionViewLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D44C1C43553D00DB72C4 /* AKCollectionViewLineLayout.m */; };
+		CE57D4901C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D48F1C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m */; };
+		CE57D4911C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D48F1C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m */; };
+		CE57D4941C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D4931C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m */; };
+		CE57D4951C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D4931C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m */; };
+		CE57D4981C4389DA00DB72C4 /* AKCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */; };
+		CE57D4991C4389DA00DB72C4 /* AKCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */; };
 		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +97,16 @@
 		CE57CD161C2C3CF600C584D4 /* AKStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStream.m; sourceTree = "<group>"; };
 		CE57CD1A1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+AKBlocksSupport.h"; sourceTree = "<group>"; };
 		CE57CD1B1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+AKBlocksSupport.m"; sourceTree = "<group>"; };
+		CE57D4431C42999800DB72C4 /* AKCollectionViewPinterestLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCollectionViewPinterestLayout.h; sourceTree = "<group>"; };
+		CE57D4441C42999800DB72C4 /* AKCollectionViewPinterestLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewPinterestLayout.m; sourceTree = "<group>"; };
+		CE57D44B1C43553D00DB72C4 /* AKCollectionViewLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCollectionViewLineLayout.h; sourceTree = "<group>"; };
+		CE57D44C1C43553D00DB72C4 /* AKCollectionViewLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewLineLayout.m; sourceTree = "<group>"; };
+		CE57D48E1C43829A00DB72C4 /* AKCollectionViewLineLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCollectionViewLineLayoutController.h; sourceTree = "<group>"; };
+		CE57D48F1C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewLineLayoutController.m; sourceTree = "<group>"; };
+		CE57D4921C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCollectionViewPinterestLayoutController.h; sourceTree = "<group>"; };
+		CE57D4931C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewPinterestLayoutController.m; sourceTree = "<group>"; };
+		CE57D4961C4389DA00DB72C4 /* AKCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCollectionViewController.h; sourceTree = "<group>"; };
+		CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +131,7 @@
 		CE3E8AD01C31439C0016DCDC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CE57D4421C42996C00DB72C4 /* CollectionViews */,
 				CE3E8AD11C31439C0016DCDC /* PullToRefresh */,
 			);
 			path = Components;
@@ -208,6 +229,23 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		CE57D4421C42996C00DB72C4 /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE57D4431C42999800DB72C4 /* AKCollectionViewPinterestLayout.h */,
+				CE57D4441C42999800DB72C4 /* AKCollectionViewPinterestLayout.m */,
+				CE57D44B1C43553D00DB72C4 /* AKCollectionViewLineLayout.h */,
+				CE57D44C1C43553D00DB72C4 /* AKCollectionViewLineLayout.m */,
+				CE57D48E1C43829A00DB72C4 /* AKCollectionViewLineLayoutController.h */,
+				CE57D48F1C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m */,
+				CE57D4921C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.h */,
+				CE57D4931C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m */,
+				CE57D4961C4389DA00DB72C4 /* AKCollectionViewController.h */,
+				CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */,
+			);
+			path = CollectionViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,6 +334,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE57D4901C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m in Sources */,
+				CE57D4941C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m in Sources */,
 				CE57CD171C2C3CF600C584D4 /* AKStream.m in Sources */,
 				CE57CCB91C295C7800C584D4 /* AKTableViewCellAdapterCache.m in Sources */,
 				CE46E85D1C324B890075CA29 /* NSString+AKDrawing.m in Sources */,
@@ -303,7 +343,10 @@
 				CE57CCB71C295C7800C584D4 /* AKDataViewController.m in Sources */,
 				CE57CD1C1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */,
 				CE57CC991C295B9000C584D4 /* AppKit.m in Sources */,
+				CE57D4451C42999800DB72C4 /* AKCollectionViewPinterestLayout.m in Sources */,
+				CE57D44D1C43553D00DB72C4 /* AKCollectionViewLineLayout.m in Sources */,
 				CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */,
+				CE57D4981C4389DA00DB72C4 /* AKCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,10 +356,15 @@
 			files = (
 				CE57CCBD1C295C8200C584D4 /* AKTableViewCellAdapterCache.m in Sources */,
 				CE57CCBC1C295C8200C584D4 /* AKTableViewCellAdapter.m in Sources */,
+				CE57D44E1C43553D00DB72C4 /* AKCollectionViewLineLayout.m in Sources */,
 				CE57CD1D1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */,
+				CE57D4911C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m in Sources */,
 				CE57CCBB1C295C8200C584D4 /* AKDataViewController.m in Sources */,
 				CE57CCA61C295C4C00C584D4 /* AppKitUnitTests.m in Sources */,
+				CE57D4951C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m in Sources */,
 				CE57CCBE1C295E5000C584D4 /* AKTableViewCellAdapterCacheTest.m in Sources */,
+				CE57D4461C42999800DB72C4 /* AKCollectionViewPinterestLayout.m in Sources */,
+				CE57D4991C4389DA00DB72C4 /* AKCollectionViewController.m in Sources */,
 				CE57CD181C2C3CF600C584D4 /* AKStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
