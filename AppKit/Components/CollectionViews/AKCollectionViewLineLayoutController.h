@@ -7,6 +7,7 @@
 //
 
 #import "AKCollectionViewController.h"
+#import "AKCollectionViewLineLayout.h"
 
 @interface AKCollectionViewLineLayoutController : AKCollectionViewController  <AKCollectionViewLineLayoutDelegate>
 
