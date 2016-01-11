@@ -6,7 +6,6 @@
 //  Copyright © 2015 Zijiao Liu. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "AKCell.h"
 
 @class AKDataViewController;
