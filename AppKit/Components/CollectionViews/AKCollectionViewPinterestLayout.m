@@ -88,6 +88,10 @@ static CGFloat const kCellPadding = 6;
     }
 }
 
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
+    return YES;
+}
+
 - (CGSize)collectionViewContentSize {
     return CGSizeMake(self.contentWidth, _contentHeight);
 }
