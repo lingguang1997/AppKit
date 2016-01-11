@@ -40,6 +40,11 @@
 		CE57D4951C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D4931C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m */; };
 		CE57D4981C4389DA00DB72C4 /* AKCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */; };
 		CE57D4991C4389DA00DB72C4 /* AKCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */; };
+		CE57D4A51C4391FA00DB72C4 /* AKCollectionViewPinterestLayout.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D4431C42999800DB72C4 /* AKCollectionViewPinterestLayout.h */; };
+		CE57D4A61C4391FA00DB72C4 /* AKCollectionViewLineLayout.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D44B1C43553D00DB72C4 /* AKCollectionViewLineLayout.h */; };
+		CE57D4A71C4391FA00DB72C4 /* AKCollectionViewLineLayoutController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D48E1C43829A00DB72C4 /* AKCollectionViewLineLayoutController.h */; };
+		CE57D4A81C4391FA00DB72C4 /* AKCollectionViewPinterestLayoutController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D4921C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.h */; };
+		CE57D4A91C4391FA00DB72C4 /* AKCollectionViewController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D4961C4389DA00DB72C4 /* AKCollectionViewController.h */; };
 		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +65,11 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CE57D4A51C4391FA00DB72C4 /* AKCollectionViewPinterestLayout.h in Copy Files (8 items) */,
+				CE57D4A61C4391FA00DB72C4 /* AKCollectionViewLineLayout.h in Copy Files (8 items) */,
+				CE57D4A71C4391FA00DB72C4 /* AKCollectionViewLineLayoutController.h in Copy Files (8 items) */,
+				CE57D4A81C4391FA00DB72C4 /* AKCollectionViewPinterestLayoutController.h in Copy Files (8 items) */,
+				CE57D4A91C4391FA00DB72C4 /* AKCollectionViewController.h in Copy Files (8 items) */,
 				CE46E85E1C324DE70075CA29 /* NSString+AKDrawing.h in Copy Files (8 items) */,
 				CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in Copy Files (8 items) */,
 				CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in Copy Files (8 items) */,
