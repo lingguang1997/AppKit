@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */; };
+		CE0E84EC1C311E3200D9F70A /* AKCell.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKCell.h */; };
 		CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */; };
 		CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */; };
 		CE46E85D1C324B890075CA29 /* NSString+AKDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46E85C1C324B890075CA29 /* NSString+AKDrawing.m */; };
@@ -72,7 +72,7 @@
 				CE57D4A91C4391FA00DB72C4 /* AKCollectionViewController.h in Copy Files (8 items) */,
 				CE46E85E1C324DE70075CA29 /* NSString+AKDrawing.h in Copy Files (8 items) */,
 				CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in Copy Files (8 items) */,
-				CE0E84EC1C311E3200D9F70A /* AKTableViewCell.h in Copy Files (8 items) */,
+				CE0E84EC1C311E3200D9F70A /* AKCell.h in Copy Files (8 items) */,
 				CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */,
 				CE57CD0B1C29957F00C584D4 /* AKDataViewController.h in Copy Files (8 items) */,
 				CE57CD0C1C29957F00C584D4 /* AKTableViewCellAdapter.h in Copy Files (8 items) */,
@@ -85,7 +85,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTableViewCell.h; sourceTree = "<group>"; };
+		CE0E84EB1C311D9400D9F70A /* AKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCell.h; sourceTree = "<group>"; };
 		CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SpiralPullToRefresh.h"; sourceTree = "<group>"; };
 		CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SpiralPullToRefresh.m"; sourceTree = "<group>"; };
 		CE46E85B1C324B890075CA29 /* NSString+AKDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AKDrawing.h"; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 			children = (
 				CE57CCAF1C295C7800C584D4 /* AKDataViewController.h */,
 				CE57CCB01C295C7800C584D4 /* AKDataViewController.m */,
-				CE0E84EB1C311D9400D9F70A /* AKTableViewCell.h */,
+				CE0E84EB1C311D9400D9F70A /* AKCell.h */,
 				CE57CCB11C295C7800C584D4 /* AKTableViewCellAdapter.h */,
 				CE57CCB21C295C7800C584D4 /* AKTableViewCellAdapter.m */,
 				CE57CCB31C295C7800C584D4 /* AKTableViewCellAdapterCache.h */,

@@ -1,5 +1,5 @@
 //
-//  AKTableViewCell.h
+//  AKCell.h
 //  AppKit
 //
 //  Created by Zijiao Liu on 12/28/15.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@protocol AKTableViewCell <NSObject>
+@protocol AKCell <NSObject>
 
 - (void)updateWithItem:(nonnull id)item;
 + (CGFloat)heightForItem:(nonnull id)item fixedWidth:(CGFloat)fixedWidth;

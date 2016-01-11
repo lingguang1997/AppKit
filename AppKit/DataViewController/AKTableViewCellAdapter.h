@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AKTableViewCell.h"
+#import "AKCell.h"
 
 @class AKDataViewController;
 
 @interface AKTableViewCellAdapter : NSObject
 
 - (CGFloat)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id)item heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
-- (nonnull UITableViewCell<AKTableViewCell> *)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id)item cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
+- (nonnull UITableViewCell<AKCell> *)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id)item cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
 - (void)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id)item didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
 
 @end
