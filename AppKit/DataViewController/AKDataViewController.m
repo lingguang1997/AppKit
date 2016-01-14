@@ -9,7 +9,7 @@
 #import <objc/runtime.h>
 #import "AKDataViewController.h"
 #import "AKStream.h"
-#import "AKCell.h"
+#import "AKTableViewCell.h"
 #import "AKTableViewCellAdapter.h"
 #import "AKTableViewCellAdapterCache.h"
 #import "UIScrollView+SpiralPullToRefresh.h"
@@ -99,9 +99,9 @@
     return [[[self stream].streamItems objectAtIndex:section] count];
 }
 
-- (AKCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (AKTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     id item = [self _itemAtIndexPath:indexPath];
-    AKCell *cell = [_tableView dequeueReusableCellWithIdentifier:NSStringFromClass([item class])];
+    AKTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:NSStringFromClass([item class])];
     if (!cell) {
         cell = [[self _adapterWithIndexPath:indexPath] dataViewController:self item:item cellForRowAtIndexPath:indexPath];
     }

@@ -1,25 +1,25 @@
 //
-//  AKCell.m
+//  AKTableViewCell.m
 //  AppKit
 //
-//  Created by Zijiao Liu on 01/13/16.
+//  Created by Zijiao Liu on 1/14/16.
 //  Copyright © 2016 Zijiao Liu. All rights reserved.
 //
 
-#import "AKCell.h"
+#import "AKTableViewCell.h"
 
 static CGFloat const kGroupBorderWidth = 1;
 static CGFloat const kGroupBorderCornerRadius = 5;
 static CGFloat const kGroupBorderHPadding = 30;
 
-@interface AKCell ()
+@interface AKTableViewCell ()
 
 @property (nonatomic, nonnull) CAShapeLayer *groupBorderLayer;
 @property (nonatomic) CGFloat groupBorderCornerRadius;
 
 @end
 
-@implementation AKCell
+@implementation AKTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -95,11 +95,11 @@ static CGFloat const kGroupBorderHPadding = 30;
 }
 
 + (CGFloat)heightForItem:(id)item fixedWidth:(CGFloat)fixedWidth {
-    return [AKCell heightForItem:item fixedWidth:fixedWidth groupStyle:AKCellGroupStyleNone groupBorderWidth:0];
+    return [AKTableViewCell heightForItem:item fixedWidth:fixedWidth groupStyle:AKCellGroupStyleNone groupBorderWidth:0];
 }
 
 + (CGFloat)heightForItem:(id)item fixedWidth:(CGFloat)fixedWidth groupStyle:(AKCellGroupStyle)groupStyle groupBorderWidth:(CGFloat)groupBorderWidth {
-    CGFloat innerHeight = [AKCell groupInnerHeightForItem:item fixedWidth:fixedWidth];
+    CGFloat innerHeight = [AKTableViewCell groupInnerHeightForItem:item fixedWidth:fixedWidth];
     if (groupBorderWidth == 0) {
         groupBorderWidth = kGroupBorderWidth;
     }

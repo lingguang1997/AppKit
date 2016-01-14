@@ -6,7 +6,7 @@
 //  Copyright © 2015 Zijiao Liu. All rights reserved.
 //
 
-#import "AKCell.h"
+#import "AKTableViewCell.h"
 #import "AKTableViewCellAdapter.h"
 
 @implementation AKTableViewCellAdapter
@@ -15,7 +15,7 @@
     return 44;
 }
 
-- (AKCell *)dataViewController:(nonnull AKDataViewController *)dataViewController item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (AKTableViewCell *)dataViewController:(nonnull AKDataViewController *)dataViewController item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return nil;
 }
 

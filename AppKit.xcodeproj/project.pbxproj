@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE00E0CA1C46904C00E7474D /* AKCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0C91C46904C00E7474D /* AKCell.m */; };
+		CE00E0D01C47997100E7474D /* AKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0CF1C47997100E7474D /* AKTableViewCell.m */; };
+		CE00E0D11C47997100E7474D /* AKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0CF1C47997100E7474D /* AKTableViewCell.m */; };
 		CE0E84EC1C311E3200D9F70A /* AKCell.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKCell.h */; };
 		CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */; };
 		CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */; };
@@ -86,7 +87,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CE00E0C91C46904C00E7474D /* AKCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCell.m; sourceTree = "<group>"; };
+		CE00E0CE1C47997100E7474D /* AKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTableViewCell.h; sourceTree = "<group>"; };
+		CE00E0CF1C47997100E7474D /* AKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKTableViewCell.m; sourceTree = "<group>"; };
 		CE0E84EB1C311D9400D9F70A /* AKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCell.h; sourceTree = "<group>"; };
 		CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SpiralPullToRefresh.h"; sourceTree = "<group>"; };
 		CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SpiralPullToRefresh.m"; sourceTree = "<group>"; };
@@ -201,10 +203,11 @@
 		CE57CCAE1C295C7800C584D4 /* DataViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E84EB1C311D9400D9F70A /* AKCell.h */,
 				CE57CCAF1C295C7800C584D4 /* AKDataViewController.h */,
 				CE57CCB01C295C7800C584D4 /* AKDataViewController.m */,
-				CE0E84EB1C311D9400D9F70A /* AKCell.h */,
-				CE00E0C91C46904C00E7474D /* AKCell.m */,
+				CE00E0CE1C47997100E7474D /* AKTableViewCell.h */,
+				CE00E0CF1C47997100E7474D /* AKTableViewCell.m */,
 				CE57CCB11C295C7800C584D4 /* AKTableViewCellAdapter.h */,
 				CE57CCB21C295C7800C584D4 /* AKTableViewCellAdapter.m */,
 				CE57CCB31C295C7800C584D4 /* AKTableViewCellAdapterCache.h */,
@@ -355,10 +358,10 @@
 				CE57CCB81C295C7800C584D4 /* AKTableViewCellAdapter.m in Sources */,
 				CE57CCB71C295C7800C584D4 /* AKDataViewController.m in Sources */,
 				CE57CD1C1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */,
+				CE00E0D01C47997100E7474D /* AKTableViewCell.m in Sources */,
 				CE57CC991C295B9000C584D4 /* AppKit.m in Sources */,
 				CE57D4451C42999800DB72C4 /* AKCollectionViewPinterestLayout.m in Sources */,
 				CE57D44D1C43553D00DB72C4 /* AKCollectionViewLineLayout.m in Sources */,
-				CE00E0CA1C46904C00E7474D /* AKCell.m in Sources */,
 				CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */,
 				CE57D4981C4389DA00DB72C4 /* AKCollectionViewController.m in Sources */,
 			);
@@ -378,6 +381,7 @@
 				CE57D4951C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m in Sources */,
 				CE57CCBE1C295E5000C584D4 /* AKTableViewCellAdapterCacheTest.m in Sources */,
 				CE57D4461C42999800DB72C4 /* AKCollectionViewPinterestLayout.m in Sources */,
+				CE00E0D11C47997100E7474D /* AKTableViewCell.m in Sources */,
 				CE57D4991C4389DA00DB72C4 /* AKCollectionViewController.m in Sources */,
 				CE57CD181C2C3CF600C584D4 /* AKStream.m in Sources */,
 			);
