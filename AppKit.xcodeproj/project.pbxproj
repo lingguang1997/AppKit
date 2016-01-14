@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE00E0D01C47997100E7474D /* AKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0CF1C47997100E7474D /* AKTableViewCell.m */; };
 		CE00E0D11C47997100E7474D /* AKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0CF1C47997100E7474D /* AKTableViewCell.m */; };
+		CE00E0D21C47A01D00E7474D /* AKTableViewCell.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE00E0CE1C47997100E7474D /* AKTableViewCell.h */; };
 		CE0E84EC1C311E3200D9F70A /* AKCell.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKCell.h */; };
 		CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */; };
 		CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */; };
@@ -67,6 +68,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CE00E0D21C47A01D00E7474D /* AKTableViewCell.h in Copy Files (8 items) */,
 				CE57D4A51C4391FA00DB72C4 /* AKCollectionViewPinterestLayout.h in Copy Files (8 items) */,
 				CE57D4A61C4391FA00DB72C4 /* AKCollectionViewLineLayout.h in Copy Files (8 items) */,
 				CE57D4A71C4391FA00DB72C4 /* AKCollectionViewLineLayoutController.h in Copy Files (8 items) */,
