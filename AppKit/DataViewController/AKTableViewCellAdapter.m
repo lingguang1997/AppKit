@@ -15,7 +15,7 @@
     return 44;
 }
 
-- (UITableViewCell<AKCell> *)dataViewController:(nonnull AKDataViewController *)dataViewController item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (AKCell *)dataViewController:(nonnull AKDataViewController *)dataViewController item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return nil;
 }
 

@@ -99,9 +99,9 @@
     return [[[self stream].streamItems objectAtIndex:section] count];
 }
 
-- (UITableViewCell<AKCell> *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (AKCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     id item = [self _itemAtIndexPath:indexPath];
-    UITableViewCell<AKCell> *cell = [_tableView dequeueReusableCellWithIdentifier:NSStringFromClass([item class])];
+    AKCell *cell = [_tableView dequeueReusableCellWithIdentifier:NSStringFromClass([item class])];
     if (!cell) {
         cell = [[self _adapterWithIndexPath:indexPath] dataViewController:self item:item cellForRowAtIndexPath:indexPath];
     }
