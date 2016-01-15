@@ -6,6 +6,7 @@
 //  Copyright © 2016 Zijiao Liu. All rights reserved.
 //
 
+#import "AKTableViewCell.h"
 #import "AKTableViewConfiguration.h"
 
 @class AKTableViewCellAdapter;
