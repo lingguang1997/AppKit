@@ -42,7 +42,7 @@ static CGFloat const kGroupBorderHPadding = 30;
     return self;
 }
 
-- (void)setGroupStyle:(AKCellGroupStyle)groupStyle {
+- (void)setGroupStyle:(AKTableViewCellGroupStyle)groupStyle {
     if (_groupStyle != groupStyle) {
         _groupStyle = groupStyle;
         [self setNeedsLayout];
@@ -95,19 +95,19 @@ static CGFloat const kGroupBorderHPadding = 30;
 }
 
 + (CGFloat)heightForItem:(id)item fixedWidth:(CGFloat)fixedWidth {
-    return [AKTableViewCell heightForItem:item fixedWidth:fixedWidth groupStyle:AKCellGroupStyleNone groupBorderWidth:0];
+    return [AKTableViewCell heightForItem:item fixedWidth:fixedWidth groupStyle:AKTableViewCellGroupStyleNone groupBorderWidth:0];
 }
 
-+ (CGFloat)heightForItem:(id)item fixedWidth:(CGFloat)fixedWidth groupStyle:(AKCellGroupStyle)groupStyle groupBorderWidth:(CGFloat)groupBorderWidth {
++ (CGFloat)heightForItem:(id)item fixedWidth:(CGFloat)fixedWidth groupStyle:(AKTableViewCellGroupStyle)groupStyle groupBorderWidth:(CGFloat)groupBorderWidth {
     CGFloat innerHeight = [AKTableViewCell groupInnerHeightForItem:item fixedWidth:fixedWidth];
     if (groupBorderWidth == 0) {
         groupBorderWidth = kGroupBorderWidth;
     }
     switch (groupStyle) {
-        case AKCellGroupStyleTop:
-        case AKCellGroupStyleBottom:
+        case AKTableViewCellGroupStyleTop:
+        case AKTableViewCellGroupStyleBottom:
             return innerHeight + groupBorderWidth;
-        case AKCellGroupStyleTopAndBottom:
+        case AKTableViewCellGroupStyleTopAndBottom:
             return innerHeight + groupBorderWidth + groupBorderWidth;
         default:
             return innerHeight;
@@ -117,7 +117,7 @@ static CGFloat const kGroupBorderHPadding = 30;
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    _groupBorderLayer.hidden = (_groupStyle == AKCellGroupStyleNone);
+    _groupBorderLayer.hidden = (_groupStyle == AKTableViewCellGroupStyleNone);
 
     if (!_groupBorderLayer.hidden) {
         CGMutablePathRef path = CGPathCreateMutable();
@@ -125,24 +125,24 @@ static CGFloat const kGroupBorderHPadding = 30;
         CGRect contentViewFrame = CGRectInset(self.bounds, _groupBorderHPadding - _groupBorderWidth / 2, 0);
         contentViewFrame.size.width = CGRectGetWidth(self.bounds) - _groupBorderHPadding - _groupBorderHPadding;
         switch (_groupStyle) {
-            case AKCellGroupStyleTop:
+            case AKTableViewCellGroupStyleTop:
                 adjustedRect.origin.y += _groupBorderWidth / 2;
                 adjustedRect.size.height += (_groupBorderWidth + _groupBorderCornerRadius);
                 CGPathAddRoundedRect(path, NULL, adjustedRect, _groupBorderCornerRadius, _groupBorderCornerRadius);
                 contentViewFrame.origin.y = _groupBorderWidth;
                 break;
-            case AKCellGroupStyleMiddle:
+            case AKTableViewCellGroupStyleMiddle:
                 adjustedRect.origin.y -= _groupBorderWidth / 2;
                 adjustedRect.size.height += _groupBorderWidth;
                 CGPathAddRect(path, NULL, adjustedRect);
                 break;
-            case AKCellGroupStyleBottom:
+            case AKTableViewCellGroupStyleBottom:
                 adjustedRect.origin.y -= (_groupBorderWidth / 2 + _groupBorderCornerRadius);
                 adjustedRect.size.height += _groupBorderCornerRadius;
                 CGPathAddRoundedRect(path, NULL, adjustedRect, _groupBorderCornerRadius, _groupBorderCornerRadius);
                 contentViewFrame.size.height -= _groupBorderWidth;
                 break;
-            case AKCellGroupStyleTopAndBottom:
+            case AKTableViewCellGroupStyleTopAndBottom:
                 adjustedRect.origin.y += _groupBorderWidth / 2;
                 adjustedRect.size.height -= _groupBorderWidth;
                 CGPathAddRoundedRect(path, NULL, adjustedRect, _groupBorderCornerRadius, _groupBorderCornerRadius);

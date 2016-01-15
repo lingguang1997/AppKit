@@ -7,20 +7,22 @@
 //
 
 #import <objc/runtime.h>
+#import "AKDataModule.h"
 #import "AKDataViewController.h"
 #import "AKStream.h"
 #import "AKTableViewCell.h"
-#import "AKTableViewCellAdapter.h"
-#import "AKTableViewCellAdapterCache.h"
+#import "AKTableViewSectionController.h"
 #import "UIScrollView+SpiralPullToRefresh.h"
 
 @interface AKDataViewController () <UITableViewDelegate, UITableViewDataSource>
 
-# pragma mark - Data structurs for data
-@property (nonatomic) AKTableViewCellAdapterCache *cache;
-
 # pragma mark - UI
+
 @property (nonatomic) UITableView *tableView;
+
+# pragma mark - Data
+
+@property (nonatomic) NSMutableDictionary *moduleDict;
 
 @end
 
@@ -31,7 +33,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _cache = [AKTableViewCellAdapterCache new];
+        _moduleDict = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -74,36 +76,43 @@
     return nil;
 }
 
-- (void)registerAdapter:(nonnull AKTableViewCellAdapter *)adapter forItemClass:(nonnull id)itemClass {
-    assert(itemClass);
-    [_cache registerAdapter:adapter forItemClass:itemClass];
+- (void)registerSectionController:(AKTableViewSectionController *)sectionController forDataModule:(id<AKDataModule>)dataModule {
+    _moduleDict[dataModule] = sectionController;
 }
 
 # pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self _adapterWithIndexPath:indexPath] dataViewController:self item:[self _itemAtIndexPath:indexPath] heightForRowAtIndexPath:indexPath];
+    AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
+    return [sectionController dataViewController:self item:[self _itemAtIndexPath:indexPath] heightForRowAtIndexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[self _adapterWithIndexPath:indexPath] dataViewController:self item:[self _itemAtIndexPath:indexPath] didSelectRowAtIndexPath:indexPath];
+    AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
+    [sectionController dataViewController:self item:[self _itemAtIndexPath:indexPath] didSelectRowAtIndexPath:indexPath];
 }
 
 # pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self stream].streamItems.count;
+    __block NSInteger count = 0;
+    [[self _modules] enumerateObjectsUsingBlock:^(id<AKDataModule>  _Nonnull dataModule, NSUInteger idx, BOOL * _Nonnull stop) {
+        count += [[dataModule data] count];
+    }];
+    return count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[[self stream].streamItems objectAtIndex:section] count];
+    id<AKDataModule> module = [self _modules][section];
+    return [[module data] count];
 }
 
 - (AKTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     id item = [self _itemAtIndexPath:indexPath];
     AKTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:NSStringFromClass([item class])];
     if (!cell) {
-        cell = [[self _adapterWithIndexPath:indexPath] dataViewController:self item:item cellForRowAtIndexPath:indexPath];
+        AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
+        cell = [sectionController dataViewController:self item:[self _itemAtIndexPath:indexPath] cellForRowAtIndexPath:indexPath];
     }
     [cell updateWithItem:item];
     return cell;
@@ -118,15 +127,22 @@
 
 # pragma mark - Private Methods
 
+- (AKTableViewSectionController *)_sectionControllerAtIndexPath:(NSIndexPath *)indexPath {
+    id<AKDataModule> dataModule = [self _modules][indexPath.section];
+    AKTableViewSectionController *sectionController = _moduleDict[dataModule];
+    assert(sectionController);
+    return sectionController;
+}
+
 - (id)_itemAtIndexPath:(NSIndexPath *)indexPath {
-    id item = [self stream].streamItems[indexPath.section][indexPath.row];
+    id<AKDataModule> dataModule = [self _modules][indexPath.section];
+    id item = [dataModule data][indexPath.row];
     assert(item);
     return item;
 }
 
-- (AKTableViewCellAdapter *)_adapterWithIndexPath:(NSIndexPath *)indexPath {
-    id item = [self _itemAtIndexPath:indexPath];
-    return [_cache adapterForItemClass:[item class]];
+- (NSArray *)_modules {
+    return [self stream].items;
 }
 
 @end

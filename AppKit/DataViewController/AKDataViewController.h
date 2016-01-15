@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "AKStream.h"
 
-@class AKTableViewCellAdapter;
+@class AKTableViewSectionController;
 
 @interface AKDataViewController : UIViewController <AKStreamDelegate>
 
 - (nonnull AKStream *)stream;
-- (void)registerAdapter:(nonnull AKTableViewCellAdapter *)adapter forItemClass:(nonnull id)itemClass;
+
+- (void)registerSectionController:(nonnull AKTableViewSectionController *)sectionController forDataModule:(nonnull id)dataModule;
 
 @end
