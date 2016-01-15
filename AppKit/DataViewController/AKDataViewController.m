@@ -76,8 +76,8 @@
     return nil;
 }
 
-- (void)registerSectionController:(AKTableViewSectionController *)sectionController forDataModule:(id<AKDataModule>)dataModule {
-    _moduleDict[dataModule] = sectionController;
+- (void)registerSectionController:(AKTableViewSectionController *)sectionController forDataModuleClass:(id)dataModuleClass {
+    _moduleDict[dataModuleClass] = sectionController;
 }
 
 # pragma mark - UITableViewDelegate

@@ -15,6 +15,6 @@
 
 - (nonnull AKStream *)stream;
 
-- (void)registerSectionController:(nonnull AKTableViewSectionController *)sectionController forDataModule:(nonnull id)dataModule;
+- (void)registerSectionController:(nonnull AKTableViewSectionController *)sectionController forDataModuleClass:(nonnull id)dataModuleClass;
 
 @end
