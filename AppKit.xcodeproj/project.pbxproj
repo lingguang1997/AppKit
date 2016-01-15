@@ -13,6 +13,9 @@
 		CE00E0D61C47B8A900E7474D /* AKTableViewSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0D51C47B8A900E7474D /* AKTableViewSectionController.m */; };
 		CE00E0D71C47B8A900E7474D /* AKTableViewSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00E0D51C47B8A900E7474D /* AKTableViewSectionController.m */; };
 		CE00E0D81C47B8BF00E7474D /* AKTableViewSectionController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE00E0D41C47B8A900E7474D /* AKTableViewSectionController.h */; };
+		CE00E0DB1C4878EC00E7474D /* NSTimer+AKBlocksSupport.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CD1A1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.h */; };
+		CE00E0DC1C4878EC00E7474D /* AKDataModule.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE00E0DA1C48075E00E7474D /* AKDataModule.h */; };
+		CE00E0DD1C4878EC00E7474D /* AKTableViewConfiguration.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE00E0D91C47B90700E7474D /* AKTableViewConfiguration.h */; };
 		CE0E84EC1C311E3200D9F70A /* AKCell.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKCell.h */; };
 		CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */; };
 		CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */; };
@@ -71,6 +74,9 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CE00E0DB1C4878EC00E7474D /* NSTimer+AKBlocksSupport.h in Copy Files (8 items) */,
+				CE00E0DC1C4878EC00E7474D /* AKDataModule.h in Copy Files (8 items) */,
+				CE00E0DD1C4878EC00E7474D /* AKTableViewConfiguration.h in Copy Files (8 items) */,
 				CE00E0D81C47B8BF00E7474D /* AKTableViewSectionController.h in Copy Files (8 items) */,
 				CE00E0D21C47A01D00E7474D /* AKTableViewCell.h in Copy Files (8 items) */,
 				CE57D4A51C4391FA00DB72C4 /* AKCollectionViewPinterestLayout.h in Copy Files (8 items) */,
