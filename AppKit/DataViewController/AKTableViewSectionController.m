@@ -87,7 +87,7 @@
 }
 
 - (AKTableViewCellAdapter *)_dataViewController:(AKDataViewController *)dataViewController adapterAtRow:(NSInteger)row {
-    id item = [self _dataViewController:dataViewController adapterAtRow:row];
+    id item = [self _dataViewController:dataViewController itemAtRow:row];
     return [_cache adapterForItemClass:[item class]];
 }
 
