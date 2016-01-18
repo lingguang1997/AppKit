@@ -32,7 +32,7 @@ static CGFloat const kActiveDistance = 200;
 
 - (void)prepareLayout {
     [super prepareLayout];
-    
+    self.itemSize = self.collectionView.bounds.size;
 }
 
 - (CGFloat)zoomFactor {
