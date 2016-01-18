@@ -9,13 +9,14 @@
 #import "AKCollectionViewPinterestLayout.h"
 #import "AKCollectionViewPinterestLayoutController.h"
 
-
 @implementation AKCollectionViewPinterestLayoutController
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.collectionView.collectionViewLayout = [[AKCollectionViewPinterestLayout alloc] initWithDelegate:self];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[[AKCollectionViewPinterestLayout alloc] initWithDelegate:self]];
+        self.collectionView.dataSource = self;
+        self.collectionView.delegate = self;
     }
     return self;
 }

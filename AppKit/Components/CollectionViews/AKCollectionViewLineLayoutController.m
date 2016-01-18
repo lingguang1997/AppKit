@@ -9,13 +9,14 @@
 #import "AKCollectionViewLineLayout.h"
 #import "AKCollectionViewLineLayoutController.h"
 
-
 @implementation AKCollectionViewLineLayoutController
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.collectionView.collectionViewLayout = [[AKCollectionViewLineLayout alloc] initWithDelegate:self];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[[AKCollectionViewLineLayout alloc] initWithDelegate:self]];
+        self.collectionView.dataSource = self;
+        self.collectionView.delegate = self;
     }
     return self;
 }

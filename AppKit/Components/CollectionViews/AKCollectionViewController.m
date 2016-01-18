@@ -14,9 +14,6 @@
     self = [super init];
     if (self) {
         _data = [NSMutableArray array];
-        _collectionView = [UICollectionView new];
-        _collectionView.dataSource = self;
-        _collectionView.delegate = self;
     }
     return self;
 }

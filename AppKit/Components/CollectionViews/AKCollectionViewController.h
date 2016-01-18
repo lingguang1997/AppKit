@@ -10,7 +10,7 @@
 
 @interface AKCollectionViewController : NSObject <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, readonly, nonnull) UICollectionView *collectionView;
+@property (nonatomic, nonnull) UICollectionView *collectionView;
 @property (nonatomic, nonnull) NSArray *data;
 
 @end
