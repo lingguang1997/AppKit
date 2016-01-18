@@ -27,6 +27,13 @@ static const NSTimeInterval kDefaultUpdateInterval = 5 * 60;
     return self;
 }
 
+- (NSMutableArray *)items {
+    if (!_items) {
+        _items = [NSMutableArray array];
+    }
+    return _items;
+}
+
 - (void)setUpdateInterval:(NSTimeInterval)updateInterval {
     if (updateInterval >= 0 && updateInterval != _updateInterval) {
         BOOL isPolling = [self isPolling];
