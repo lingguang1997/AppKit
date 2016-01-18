@@ -19,6 +19,7 @@
 @property (nonatomic, weak) id<AKCollectionViewLineLayoutDelegate> delegate;
 @property (nonatomic) CGFloat zoomFactor;
 @property (nonatomic) BOOL zoomAllowed;
+@property (nonatomic) CGFloat spacing;
 
 - (nonnull instancetype)initWithDelegate:(nonnull id<AKCollectionViewLineLayoutDelegate>)delegate;
 

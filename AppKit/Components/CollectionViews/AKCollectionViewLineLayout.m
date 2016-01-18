@@ -10,6 +10,7 @@
 
 static CGFloat const kZoomFactor = .3;
 static CGFloat const kActiveDistance = 200;
+static CGFloat const kSpacing = 0;
 
 @implementation AKCollectionViewLineLayout
 
@@ -25,6 +26,7 @@ static CGFloat const kActiveDistance = 200;
     self = [super init];
     if (self) {
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        self.minimumLineSpacing = kSpacing;
         _zoomAllowed = NO;
     }
     return self;
@@ -48,17 +50,16 @@ static CGFloat const kActiveDistance = 200;
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
     NSArray *layoutAttributes = [super layoutAttributesForElementsInRect:rect];
-
     if (_zoomAllowed) {
         CGRect visibleRect;
         visibleRect.origin = self.collectionView.contentOffset;
         visibleRect.size = self.collectionView.bounds.size;
-        
+
         [layoutAttributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull attributes, NSUInteger idx, BOOL * _Nonnull stop) {
             if (CGRectIntersectsRect(attributes.frame, rect)) {
                 CGFloat distance = CGRectGetMidX(visibleRect) - attributes.center.x;
                 CGFloat normalizedDistance = distance / kActiveDistance;
-                
+
                 if (ABS(distance) < kActiveDistance) {
                     CGFloat zoom = 1 + kZoomFactor * (1 - ABS(normalizedDistance));
                     attributes.transform3D = CATransform3DMakeScale(zoom, zoom, 1);
