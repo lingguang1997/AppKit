@@ -6,6 +6,7 @@
 //  Copyright © 2016 Zijiao Liu. All rights reserved.
 //
 
+#import "AKDataModule.h"
 #import "AKDataViewController.h"
 #import "AKTableViewCell.h"
 #import "AKTableViewCellAdapter.h"
@@ -38,22 +39,22 @@
 
 # pragma mark - AKTableViewConfiguration
 
-- (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id)item heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     AKTableViewCellAdapter *adapter = [self _adapterAtRow:indexPath.row];
     return [adapter dataViewController:dataViewController item:item heightForRowAtIndexPath:indexPath];
 }
 
-- (AKTableViewCell *)dataViewController:(AKDataViewController *)dataViewController item:(id)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (AKTableViewCell *)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AKTableViewCellAdapter *adapter = [self _adapterAtRow:indexPath.row];
     return [adapter dataViewController:dataViewController item:item cellForRowAtIndexPath:indexPath];
 }
 
-- (void)dataViewController:(AKDataViewController *)dataViewController item:(id)item didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     AKTableViewCellAdapter *adapter = [self _adapterAtRow:indexPath.row];
     [adapter dataViewController:dataViewController item:item didSelectRowAtIndexPath:indexPath];
 }
 
-- (AKTableViewCellGroupStyle)dataViewController:(AKDataViewController *)dataViewController item:(id)item groupStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (AKTableViewCellGroupStyle)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item groupStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (_grouped) {
         BOOL isFirstItem = [self _isFirstItem:item];
         BOOL isLastItem = [self _isLastItem:item];
@@ -68,6 +69,14 @@
         return AKTableViewCellGroupStyleMiddle;
     }
     return AKTableViewCellGroupStyleNone;
+}
+
+- (NSInteger)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item numberOfRowsInSection:(NSInteger)section {
+    if ([item conformsToProtocol:@protocol(AKDataModule)]) {
+        id<AKDataModule> module = (id<AKDataModule>)item;
+        return [module data].count;
+    }
+    return 1;
 }
 
 # pragma mark - Private methods

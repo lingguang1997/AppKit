@@ -17,6 +17,7 @@
 
 - (void)registerAdapter:(nonnull AKTableViewCellAdapter *)adapter forItemClass:(nonnull id)itemClass;
 
-- (AKTableViewCellGroupStyle)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id)item groupStyleForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
+- (AKTableViewCellGroupStyle)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id<NSObject>)item groupStyleForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
+- (NSInteger)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id<NSObject>)item numberOfRowsInSection:(NSInteger)section;
 
 @end

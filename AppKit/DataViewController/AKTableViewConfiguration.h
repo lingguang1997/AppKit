@@ -13,8 +13,8 @@
 
 @protocol AKTableViewConfiguration <NSObject>
 
-- (CGFloat)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id)item heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
-- (nonnull AKTableViewCell *)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id)item cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
-- (void)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id)item didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
+- (CGFloat)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id<NSObject>)item heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
+- (nonnull AKTableViewCell *)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id<NSObject>)item cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
+- (void)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id<NSObject>)item didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
 
 @end

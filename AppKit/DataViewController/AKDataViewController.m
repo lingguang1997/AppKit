@@ -95,16 +95,12 @@
 # pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    __block NSInteger count = 0;
-    [[self _modules] enumerateObjectsUsingBlock:^(id<AKDataModule>  _Nonnull dataModule, NSUInteger idx, BOOL * _Nonnull stop) {
-        count += [[dataModule data] count];
-    }];
-    return count;
+    return [self _modules].count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id<AKDataModule> module = [self _modules][section];
-    return [[module data] count];
+    AKTableViewSectionController *sectionController = [self _sectionControllerAtSection:section];
+    return [sectionController dataViewController:self item:[self _moduleAtSection:section] numberOfRowsInSection:section];
 }
 
 - (AKTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -127,11 +123,21 @@
 
 # pragma mark - Private Methods
 
-- (AKTableViewSectionController *)_sectionControllerAtIndexPath:(NSIndexPath *)indexPath {
-    id<AKDataModule> dataModule = [self _modules][indexPath.section];
+- (AKTableViewSectionController *)_sectionControllerAtSection:(NSInteger)section {
+    id<AKDataModule> dataModule = [self _modules][section];
     AKTableViewSectionController *sectionController = _moduleDict[dataModule];
     assert(sectionController);
     return sectionController;
+}
+
+- (AKTableViewSectionController *)_sectionControllerAtIndexPath:(NSIndexPath *)indexPath {
+    return [self _sectionControllerAtSection:indexPath.section];
+}
+
+- (id<AKDataModule>)_moduleAtSection:(NSInteger)section {
+    NSArray *modules = [self _modules];
+    assert(modules.count > section);
+    return modules[section];
 }
 
 - (id)_itemAtIndexPath:(NSIndexPath *)indexPath {
