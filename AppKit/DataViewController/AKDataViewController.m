@@ -84,12 +84,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
-    return [sectionController dataViewController:self item:[self _itemAtIndexPath:indexPath] heightForRowAtIndexPath:indexPath];
+    return [sectionController dataViewController:self item:[self _moduleAtSection:indexPath.section] heightForRowAtIndexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
-    [sectionController dataViewController:self item:[self _itemAtIndexPath:indexPath] didSelectRowAtIndexPath:indexPath];
+    [sectionController dataViewController:self item:[self _moduleAtSection:indexPath.section] didSelectRowAtIndexPath:indexPath];
 }
 
 # pragma mark - UITableViewDataSource
@@ -104,11 +104,11 @@
 }
 
 - (AKTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id item = [self _itemAtIndexPath:indexPath];
+    id item = [self _moduleAtSection:indexPath.section];
     AKTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:NSStringFromClass([item class])];
     if (!cell) {
         AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
-        cell = [sectionController dataViewController:self item:[self _itemAtIndexPath:indexPath] cellForRowAtIndexPath:indexPath];
+        cell = [sectionController dataViewController:self item:item cellForRowAtIndexPath:indexPath];
     }
     [cell updateWithItem:item];
     return cell;
@@ -138,13 +138,6 @@
     NSArray *modules = [self _modules];
     assert(modules.count > section);
     return modules[section];
-}
-
-- (id)_itemAtIndexPath:(NSIndexPath *)indexPath {
-    id<AKDataModule> dataModule = [self _modules][indexPath.section];
-    id item = [dataModule data][indexPath.row];
-    assert(item);
-    return item;
 }
 
 - (NSArray *)_modules {
