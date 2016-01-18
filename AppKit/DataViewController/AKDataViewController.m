@@ -125,7 +125,7 @@
 
 - (AKTableViewSectionController *)_sectionControllerAtSection:(NSInteger)section {
     id<AKDataModule> dataModule = [self _modules][section];
-    AKTableViewSectionController *sectionController = _moduleDict[dataModule];
+    AKTableViewSectionController *sectionController = _moduleDict[[dataModule class]];
     assert(sectionController);
     return sectionController;
 }
