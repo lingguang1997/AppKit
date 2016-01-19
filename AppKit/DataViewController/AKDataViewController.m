@@ -14,6 +14,8 @@
 #import "AKTableViewSectionController.h"
 #import "UIScrollView+SpiralPullToRefresh.h"
 
+static NSString * const kDefaultSectionControllerKey = @"DefaultSectionControllerKey";
+
 @interface AKDataViewController () <UITableViewDelegate, UITableViewDataSource>
 
 # pragma mark - UI
@@ -33,7 +35,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _moduleDict = [NSMutableDictionary dictionary];
+        _moduleDict = [NSMutableDictionary dictionaryWithObject:[AKTableViewSectionController new] forKey:kDefaultSectionControllerKey];
     }
     return self;
 }
@@ -84,27 +86,29 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
-    return [sectionController dataViewController:self item:[self _moduleAtSection:indexPath.section] heightForRowAtIndexPath:indexPath];
+    id item = [self _itemAtIndexPath:indexPath];
+    return [sectionController dataViewController:self item:item heightForRowAtIndexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
-    [sectionController dataViewController:self item:[self _moduleAtSection:indexPath.section] didSelectRowAtIndexPath:indexPath];
+    id item = [self _itemAtIndexPath:indexPath];
+    [sectionController dataViewController:self item:item didSelectRowAtIndexPath:indexPath];
 }
 
 # pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self _modules].count;
+    return [self _items].count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    AKTableViewSectionController *sectionController = [self _sectionControllerAtSection:section];
-    return [sectionController dataViewController:self item:[self _moduleAtSection:section] numberOfRowsInSection:section];
+    NSArray *itemsInSection = [self _items][section];
+    return itemsInSection.count;
 }
 
 - (AKTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id item = [self _moduleAtSection:indexPath.section];
+    id item = [self _itemAtIndexPath:indexPath];
     AKTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:NSStringFromClass([item class])];
     if (!cell) {
         AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
@@ -123,24 +127,24 @@
 
 # pragma mark - Private Methods
 
-- (AKTableViewSectionController *)_sectionControllerAtSection:(NSInteger)section {
-    id<AKDataModule> dataModule = [self _modules][section];
-    AKTableViewSectionController *sectionController = _moduleDict[[dataModule class]];
-    assert(sectionController);
-    return sectionController;
+- (id)_itemAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *items = [self _items];
+    assert(items.count > indexPath.section);
+    assert([items[indexPath.section] count] > indexPath.row);
+    return items[indexPath.section][indexPath.row];
 }
 
 - (AKTableViewSectionController *)_sectionControllerAtIndexPath:(NSIndexPath *)indexPath {
-    return [self _sectionControllerAtSection:indexPath.section];
+    id<NSObject> item = [self _itemAtIndexPath:indexPath];
+    if ([item conformsToProtocol:@protocol(AKDataModule)]) {
+        AKTableViewSectionController *sectionController = _moduleDict[[item class]];
+        assert(sectionController);
+        return sectionController;
+    }
+    return _moduleDict[kDefaultSectionControllerKey];
 }
 
-- (id<AKDataModule>)_moduleAtSection:(NSInteger)section {
-    NSArray *modules = [self _modules];
-    assert(modules.count > section);
-    return modules[section];
-}
-
-- (NSArray *)_modules {
+- (NSArray *)_items {
     return [self stream].items;
 }
 

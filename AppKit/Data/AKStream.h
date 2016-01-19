@@ -17,7 +17,12 @@
 @interface AKStream : NSObject
 
 @property (nonatomic) NSTimeInterval updateInterval;
-@property (nonatomic, nullable) NSMutableArray *items; // data modules
+
+/*
+ An example of items is
+ @[@[data_module], @[item0, item2], @[data_module], @[item3, item4, item5]]
+*/
+@property (nonatomic, nullable) NSMutableArray *items;
 @property (nonatomic, weak, nullable) id<AKStreamDelegate> delegate;
 
 - (BOOL)shouldPoll;
