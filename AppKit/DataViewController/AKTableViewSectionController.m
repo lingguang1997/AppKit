@@ -77,15 +77,25 @@
     return [_cache adapterForItemClass:[item class]];
 }
 
+- (NSArray *)_itemsInSection:(NSInteger)section dataViewController:(AKDataViewController *)dataViewController {
+    NSArray *sections = dataViewController.stream.items;
+    id<NSObject> items = sections[section];
+    NSArray *itemsInSection;
+    if ([items isKindOfClass:[NSArray class]]) {
+        itemsInSection = (NSArray *)items;
+    } else if ([items conformsToProtocol:@protocol(AKDataModule)]) {
+        itemsInSection = [(id<AKDataModule>)items data];
+    }
+    return itemsInSection;
+}
+
 - (BOOL)_isFirstItem:(id)item inSection:(NSInteger)section dataViewController:(AKDataViewController *)dataViewController {
-    NSArray *items = dataViewController.stream.items;
-    NSArray *itemsInSection = items[section];
+    NSArray *itemsInSection = [self _itemsInSection:section dataViewController:dataViewController];
     return [item isEqual:[itemsInSection firstObject]];
 }
 
 - (BOOL)_isLastItem:(id)item inSection:(NSInteger)section dataViewController:(AKDataViewController *)dataViewController {
-    NSArray *items = dataViewController.stream.items;
-    NSArray *itemsInSection = items[section];
+    NSArray *itemsInSection = [self _itemsInSection:section dataViewController:dataViewController];
     return [item isEqual:[itemsInSection lastObject]];
 }
 

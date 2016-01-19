@@ -20,7 +20,9 @@
 
 /*
  An example of items is
- @[@[data_module], @[item0, item2], @[data_module], @[item3, item4, item5]]
+ @[@[data_module], data_module, @[item0, item2], @[data_module], @[item3, item4, item5]]
+ @[data_module]: data in it is displayed in a sigle row
+ data_module, @[item0, item2]: data in it is displayed in multiple row
 */
 @property (nonatomic, nullable) NSMutableArray *items;
 @property (nonatomic, weak, nullable) id<AKStreamDelegate> delegate;

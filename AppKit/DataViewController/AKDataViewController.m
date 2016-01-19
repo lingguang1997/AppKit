@@ -103,8 +103,14 @@ static NSString * const kDefaultSectionControllerKey = @"DefaultSectionControlle
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSArray *itemsInSection = [self _items][section];
-    return itemsInSection.count;
+    id<NSObject> item = [self _items][section];
+    if ([item conformsToProtocol:@protocol(AKDataModule)]) {
+        id<AKDataModule> module = (id<AKDataModule>)item;
+        return module.data.count;
+    } else {
+        NSArray *items = (NSArray *)item;
+        return [items count];
+    }
 }
 
 - (AKTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -130,18 +136,39 @@ static NSString * const kDefaultSectionControllerKey = @"DefaultSectionControlle
 - (id)_itemAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *items = [self _items];
     assert(items.count > indexPath.section);
-    assert([items[indexPath.section] count] > indexPath.row);
-    return items[indexPath.section][indexPath.row];
+    id<NSObject> item;
+    id<NSObject> section = items[indexPath.section];
+    if ([section isKindOfClass:[NSArray class]]) {
+        NSArray *itemsInSection = (NSArray *)section;
+        assert(itemsInSection.count > indexPath.row);
+        item = itemsInSection[indexPath.row];
+    } else if ([section conformsToProtocol:@protocol(AKDataModule)]) {
+        id<AKDataModule> module = (id<AKDataModule>)section;
+        assert(module.data.count > indexPath.row);
+        item = [module.data objectAtIndex:indexPath.row];
+    } else {
+        assert(true);
+    }
+    return item;
 }
 
 - (AKTableViewSectionController *)_sectionControllerAtIndexPath:(NSIndexPath *)indexPath {
-    id<NSObject> item = [self _itemAtIndexPath:indexPath];
-    if ([item conformsToProtocol:@protocol(AKDataModule)]) {
-        AKTableViewSectionController *sectionController = _moduleDict[[item class]];
-        assert(sectionController);
-        return sectionController;
+    NSArray *items = [self _items];
+    id<NSObject> section = items[indexPath.section];
+    id<NSObject> item;
+    if ([section isKindOfClass:[NSArray class]]) {
+        NSArray *itemsInSection = (NSArray *)section;
+        if (itemsInSection.count == 1 && [itemsInSection[0] conformsToProtocol:@protocol(AKDataModule)]) {
+            item = itemsInSection[0];
+        } else if (itemsInSection.count > 0) {
+            item = kDefaultSectionControllerKey;
+        } else {
+            assert(true);
+        }
+    } else if ([section conformsToProtocol:@protocol(AKDataModule)]) {
+        item = section;
     }
-    return _moduleDict[kDefaultSectionControllerKey];
+    return _moduleDict[item];
 }
 
 - (NSArray *)_items {
