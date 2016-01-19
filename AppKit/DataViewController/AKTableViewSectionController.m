@@ -26,7 +26,6 @@
     self = [super init];
     if (self) {
         _cache = [AKTableViewCellAdapterCache new];
-        _grouped = YES;
     }
     return self;
 }
