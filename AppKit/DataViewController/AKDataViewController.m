@@ -116,10 +116,11 @@ static NSString * const kDefaultSectionControllerKey = @"DefaultSectionControlle
 - (AKTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     id item = [self _itemAtIndexPath:indexPath];
     AKTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:NSStringFromClass([item class])];
+    AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
     if (!cell) {
-        AKTableViewSectionController *sectionController = [self _sectionControllerAtIndexPath:indexPath];
         cell = [sectionController dataViewController:self item:item cellForRowAtIndexPath:indexPath];
     }
+    cell.groupStyle = [sectionController dataViewController:self item:item groupStyleForRowAtIndexPath:indexPath];
     [cell updateWithItem:item];
     return cell;
 }
