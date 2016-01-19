@@ -44,6 +44,7 @@ static NSString * const kDefaultSectionControllerKey = @"DefaultSectionControlle
     [super viewDidLoad];
     _tableView = [UITableView new];
     [self.view addSubview:_tableView];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     if ([[self stream] shouldPoll]) {
