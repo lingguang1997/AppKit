@@ -105,7 +105,7 @@ static CGFloat const kSeperatorHPadding = 15;
 }
 
 + (CGFloat)heightForItem:(id)item groupStyle:(AKTableViewCellGroupStyle)groupStyle seperatorEnabled:(BOOL)seperatorEnabled fixedWidth:(CGFloat)fixedWidth {
-    CGFloat innerHeight = [AKTableViewCell heightForItem:item fixedWidth:fixedWidth];
+    CGFloat innerHeight = [[self class] heightForItem:item fixedWidth:fixedWidth];
     CGFloat groupBorderWidth = [self groupBorderWidth];
     CGFloat seperatorHeight = [self seperatorHeight];
     switch (groupStyle) {
