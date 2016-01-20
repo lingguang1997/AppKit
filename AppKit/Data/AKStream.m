@@ -27,13 +27,6 @@ static const NSTimeInterval kDefaultUpdateInterval = 5 * 60;
     return self;
 }
 
-- (NSMutableArray *)items {
-    if (!_items) {
-        _items = [NSMutableArray array];
-    }
-    return _items;
-}
-
 - (void)setUpdateInterval:(NSTimeInterval)updateInterval {
     if (updateInterval >= 0 && updateInterval != _updateInterval) {
         BOOL isPolling = [self isPolling];
@@ -69,7 +62,8 @@ static const NSTimeInterval kDefaultUpdateInterval = 5 * 60;
 }
 
 - (void)update {
-    // should be overridden
+    // should be overridden and subclass should call super
+    _items = [NSMutableArray array];
 }
 
 @end
