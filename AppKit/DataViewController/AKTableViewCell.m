@@ -12,7 +12,7 @@ static CGFloat const kGroupBorderWidth = 1;
 static CGFloat const kGroupBorderCornerRadius = 5;
 static CGFloat const kGroupBorderHPadding = 15;
 static CGFloat const kSeperatorHeight = 1;
-static CGFloat const kSeperatorHPadding = 15;
+static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPadding;
 
 @interface AKTableViewCell ()
 
@@ -167,7 +167,7 @@ static CGFloat const kSeperatorHPadding = 15;
         _groupBorderLayer.path = path;
         CGPathRelease(path);
         CGFloat seperatorHeight = [[self class] seperatorHeight];
-        _seperatorLayer.frame = CGRectMake(kSeperatorHPadding, CGRectGetHeight(contentViewFrame) - seperatorHeight, CGRectGetWidth(self.bounds) - seperatorHeight - seperatorHeight, seperatorHeight);
+        _seperatorLayer.frame = CGRectMake(kSeperatorHPadding, CGRectGetHeight(contentViewFrame) - seperatorHeight, CGRectGetWidth(self.bounds) - kSeperatorHPadding - kSeperatorHPadding, seperatorHeight);
     }
 }
 
