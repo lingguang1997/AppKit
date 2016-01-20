@@ -11,6 +11,8 @@
 
 @interface AKTableViewCellAdapter : NSObject <AKTableViewConfiguration>
 
+- (CGFloat)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id<NSObject>)item heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath NS_UNAVAILABLE;
+
 - (CGFloat)dataViewController:(nonnull AKDataViewController *)dataViewController item:(nonnull id<NSObject>)item groupStyle:(AKTableViewCellGroupStyle)groupStyle seperatorEnabled:(BOOL)seperatorEnabled heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath;
 
 @end
