@@ -6,10 +6,14 @@
 //  Copyright © 2015 Zijiao Liu. All rights reserved.
 //
 
-#import "AKTableViewCell.h"
 #import "AKTableViewCellAdapter.h"
 
 @implementation AKTableViewCellAdapter
+
+- (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item groupStyle:(AKTableViewCellGroupStyle)groupStyle seperatorEnabled:(BOOL)seperatorEnabled heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // should be overriden by subclasses
+    return 44;
+}
 
 - (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44;

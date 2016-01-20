@@ -20,15 +20,15 @@ typedef NS_ENUM(NSInteger, AKTableViewCellGroupStyle) {
 
 @property (nonatomic) AKTableViewCellGroupStyle groupStyle;
 @property (nonatomic, readonly, nullable) UIView *groupInnerView;
-@property (nonatomic) CGFloat groupBorderWidth;
 @property (nonatomic) CGFloat groupBorderHPadding;
 @property (nonatomic, nullable) UIColor *groupBorderColor;
 @property (nonatomic, nullable) UIColor *groupOuterColor;
 @property (nonatomic, nullable) UIColor *groupInnerColor;
+@property (nonatomic, getter=isSeperatorEnabled) BOOL seperatorEnabled;
 
-- (void)updateWithItem:(nonnull id)item;
-+ (CGFloat)heightForItem:(nonnull id)item fixedWidth:(CGFloat)fixedWidth;
-+ (CGFloat)groupInnerHeightForItem:(nonnull id)item fixedWidth:(CGFloat)fixedWidth;
-+ (CGFloat)heightForItem:(nonnull id)item fixedWidth:(CGFloat)fixedWidth groupStyle:(AKTableViewCellGroupStyle)groupStyle groupBorderWidth:(CGFloat)groupBorderWidth;
++ (CGFloat)groupBorderWidth;
++ (CGFloat)seperatorHeight;
+
++ (CGFloat)heightForItem:(nonnull id)item groupStyle:(AKTableViewCellGroupStyle)groupStyle seperatorEnabled:(BOOL)seperatorEnabled fixedWidth:(CGFloat)fixedWidth;
 
 @end
