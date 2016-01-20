@@ -10,7 +10,7 @@
 
 static CGFloat const kGroupBorderWidth = 1;
 static CGFloat const kGroupBorderCornerRadius = 5;
-static CGFloat const kGroupBorderHPadding = 30;
+static CGFloat const kGroupBorderHPadding = 15;
 
 @interface AKTableViewCell ()
 
@@ -35,6 +35,8 @@ static CGFloat const kGroupBorderHPadding = 30;
         UIView *backgroundView = [[UIView alloc] initWithFrame:self.bounds];
         [backgroundView.layer addSublayer:_groupBorderLayer];
         self.backgroundView = backgroundView;
+
+        self.backgroundColor = [UIColor colorWithRed:245.0 / 255 green:246.0 / 255 blue:247.0 / 255 alpha:1];
 
         self.clipsToBounds = YES;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
