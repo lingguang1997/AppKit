@@ -39,7 +39,7 @@
 
 - (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     AKTableViewCellAdapter *adapter = [self _adapterForItem:item];
-    AKTableViewCellGroupStyle groupStyle = [self dataViewController:dataViewController item:item heightForRowAtIndexPath:indexPath];
+    AKTableViewCellGroupStyle groupStyle = [self dataViewController:dataViewController item:item groupStyleForRowAtIndexPath:indexPath];
     return [adapter dataViewController:dataViewController item:item groupStyle:groupStyle seperatorEnabled:YES heightForRowAtIndexPath:indexPath];
 }
 
