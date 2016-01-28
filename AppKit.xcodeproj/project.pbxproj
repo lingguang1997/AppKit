@@ -57,6 +57,7 @@
 		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
 		CEF1F5C71C55EF840062B243 /* AKStepBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1F5C61C55EF840062B243 /* AKStepBar.m */; };
 		CEF1F5C81C55EF840062B243 /* AKStepBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1F5C61C55EF840062B243 /* AKStepBar.m */; };
+		CEF1F5C91C5A6E460062B243 /* AKStepBar.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CEF1F5C51C55EF840062B243 /* AKStepBar.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CEF1F5C91C5A6E460062B243 /* AKStepBar.h in Copy Files (8 items) */,
 				CE00E0DB1C4878EC00E7474D /* NSTimer+AKBlocksSupport.h in Copy Files (8 items) */,
 				CE00E0DC1C4878EC00E7474D /* AKDataModule.h in Copy Files (8 items) */,
 				CE00E0DD1C4878EC00E7474D /* AKTableViewConfiguration.h in Copy Files (8 items) */,
