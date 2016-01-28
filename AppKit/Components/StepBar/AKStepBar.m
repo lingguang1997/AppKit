@@ -20,7 +20,7 @@
     assert(steps);
     self = [super initWithFrame:frame];
     if (self) {
-        _steps = steps;
+        self.steps = steps;
         _currentStep = 0;
         self.backgroundColor = [AKStepBar defaultBackgroundColor];
         _highlightStepLayer = [CALayer new];
@@ -32,6 +32,13 @@
 
 - (instancetype)initWithSteps:(NSInteger)steps {
     return [self initWithFrame:CGRectZero steps:steps];
+}
+
+- (void)setSteps:(NSInteger)steps {
+    if (_steps != steps) {
+        assert(steps);
+        _steps = steps;
+    }
 }
 
 - (void)setHighlightColor:(UIColor *)highlightColor {
