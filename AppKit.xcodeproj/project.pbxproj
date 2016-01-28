@@ -55,6 +55,8 @@
 		CE57D4A81C4391FA00DB72C4 /* AKCollectionViewPinterestLayoutController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D4921C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.h */; };
 		CE57D4A91C4391FA00DB72C4 /* AKCollectionViewController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D4961C4389DA00DB72C4 /* AKCollectionViewController.h */; };
 		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
+		CEF1F5C71C55EF840062B243 /* AKStepBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1F5C61C55EF840062B243 /* AKStepBar.m */; };
+		CEF1F5C81C55EF840062B243 /* AKStepBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1F5C61C55EF840062B243 /* AKStepBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,8 @@
 		CE57D4931C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewPinterestLayoutController.m; sourceTree = "<group>"; };
 		CE57D4961C4389DA00DB72C4 /* AKCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCollectionViewController.h; sourceTree = "<group>"; };
 		CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewController.m; sourceTree = "<group>"; };
+		CEF1F5C51C55EF840062B243 /* AKStepBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStepBar.h; sourceTree = "<group>"; };
+		CEF1F5C61C55EF840062B243 /* AKStepBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStepBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 		CE3E8AD01C31439C0016DCDC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CEF1F5C41C55EF700062B243 /* StepBar */,
 				CE57D4421C42996C00DB72C4 /* CollectionViews */,
 				CE3E8AD11C31439C0016DCDC /* PullToRefresh */,
 			);
@@ -282,6 +287,15 @@
 			path = CollectionViews;
 			sourceTree = "<group>";
 		};
+		CEF1F5C41C55EF700062B243 /* StepBar */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1F5C51C55EF840062B243 /* AKStepBar.h */,
+				CEF1F5C61C55EF840062B243 /* AKStepBar.m */,
+			);
+			path = StepBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -373,6 +387,7 @@
 				CE57D4901C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m in Sources */,
 				CE57D4941C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m in Sources */,
 				CE57CD171C2C3CF600C584D4 /* AKStream.m in Sources */,
+				CEF1F5C71C55EF840062B243 /* AKStepBar.m in Sources */,
 				CE57CCB91C295C7800C584D4 /* AKTableViewCellAdapterCache.m in Sources */,
 				CE46E85D1C324B890075CA29 /* NSString+AKDrawing.m in Sources */,
 				CE57CCB81C295C7800C584D4 /* AKTableViewCellAdapter.m in Sources */,
@@ -392,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF1F5C81C55EF840062B243 /* AKStepBar.m in Sources */,
 				CE57CCBD1C295C8200C584D4 /* AKTableViewCellAdapterCache.m in Sources */,
 				CE57CCBC1C295C8200C584D4 /* AKTableViewCellAdapter.m in Sources */,
 				CE57D44E1C43553D00DB72C4 /* AKCollectionViewLineLayout.m in Sources */,
