@@ -17,6 +17,7 @@
 		CE00E0DC1C4878EC00E7474D /* AKDataModule.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE00E0DA1C48075E00E7474D /* AKDataModule.h */; };
 		CE00E0DD1C4878EC00E7474D /* AKTableViewConfiguration.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE00E0D91C47B90700E7474D /* AKTableViewConfiguration.h */; };
 		CE0E84EC1C311E3200D9F70A /* AKCell.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKCell.h */; };
+		CE1DB2291C6114F800D75D05 /* AKRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1DB2281C6114F800D75D05 /* AKRoundedView.m */; };
 		CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */; };
 		CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */; };
 		CE46E85D1C324B890075CA29 /* NSString+AKDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46E85C1C324B890075CA29 /* NSString+AKDrawing.m */; };
@@ -110,6 +111,8 @@
 		CE00E0D91C47B90700E7474D /* AKTableViewConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTableViewConfiguration.h; sourceTree = "<group>"; };
 		CE00E0DA1C48075E00E7474D /* AKDataModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKDataModule.h; sourceTree = "<group>"; };
 		CE0E84EB1C311D9400D9F70A /* AKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCell.h; sourceTree = "<group>"; };
+		CE1DB2271C6114F800D75D05 /* AKRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKRoundedView.h; sourceTree = "<group>"; };
+		CE1DB2281C6114F800D75D05 /* AKRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKRoundedView.m; sourceTree = "<group>"; };
 		CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SpiralPullToRefresh.h"; sourceTree = "<group>"; };
 		CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SpiralPullToRefresh.m"; sourceTree = "<group>"; };
 		CE46E85B1C324B890075CA29 /* NSString+AKDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AKDrawing.h"; sourceTree = "<group>"; };
@@ -164,9 +167,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE1DB2261C6114F800D75D05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE1DB2271C6114F800D75D05 /* AKRoundedView.h */,
+				CE1DB2281C6114F800D75D05 /* AKRoundedView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CE3E8AD01C31439C0016DCDC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CE1DB2261C6114F800D75D05 /* View */,
 				CEF1F5C41C55EF700062B243 /* StepBar */,
 				CE57D4421C42996C00DB72C4 /* CollectionViews */,
 				CE3E8AD11C31439C0016DCDC /* PullToRefresh */,
@@ -395,6 +408,7 @@
 				CE57CCB81C295C7800C584D4 /* AKTableViewCellAdapter.m in Sources */,
 				CE00E0D61C47B8A900E7474D /* AKTableViewSectionController.m in Sources */,
 				CE57CCB71C295C7800C584D4 /* AKDataViewController.m in Sources */,
+				CE1DB2291C6114F800D75D05 /* AKRoundedView.m in Sources */,
 				CE57CD1C1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */,
 				CE00E0D01C47997100E7474D /* AKTableViewCell.m in Sources */,
 				CE57CC991C295B9000C584D4 /* AppKit.m in Sources */,
