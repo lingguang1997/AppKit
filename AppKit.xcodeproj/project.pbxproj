@@ -18,6 +18,7 @@
 		CE00E0DD1C4878EC00E7474D /* AKTableViewConfiguration.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE00E0D91C47B90700E7474D /* AKTableViewConfiguration.h */; };
 		CE0E84EC1C311E3200D9F70A /* AKCell.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE0E84EB1C311D9400D9F70A /* AKCell.h */; };
 		CE1DB2291C6114F800D75D05 /* AKRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1DB2281C6114F800D75D05 /* AKRoundedView.m */; };
+		CE1DB22A1C61C6F200D75D05 /* AKRoundedView.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE1DB2271C6114F800D75D05 /* AKRoundedView.h */; };
 		CE3E8AD41C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3E8AD31C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.m */; };
 		CE3E8AD51C3143B90016DCDC /* UIScrollView+SpiralPullToRefresh.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE3E8AD21C31439C0016DCDC /* UIScrollView+SpiralPullToRefresh.h */; };
 		CE46E85D1C324B890075CA29 /* NSString+AKDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46E85C1C324B890075CA29 /* NSString+AKDrawing.m */; };
@@ -78,6 +79,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CE1DB22A1C61C6F200D75D05 /* AKRoundedView.h in Copy Files (8 items) */,
 				CEF1F5C91C5A6E460062B243 /* AKStepBar.h in Copy Files (8 items) */,
 				CE00E0DB1C4878EC00E7474D /* NSTimer+AKBlocksSupport.h in Copy Files (8 items) */,
 				CE00E0DC1C4878EC00E7474D /* AKDataModule.h in Copy Files (8 items) */,
