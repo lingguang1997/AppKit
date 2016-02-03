@@ -13,6 +13,9 @@ const AKRoundedCorner AKRoundedCornerAll = AKRoundedCornerTopRight | AKRoundedCo
 
 const AKDrawnBorderSides AKDrawnBorderSidesAll = AKDrawnBorderSidesRight | AKDrawnBorderSidesLeft | AKDrawnBorderSidesTop | AKDrawnBorderSidesBottom;
 
+NSString * const AKRoundedViewGradientColorKey = @"color";
+NSString * const AKRoundedViewGradientLocationKey = @"location";
+
 UIImage * AKRoundedCornerImage(CGSize size,
                                AKRoundedCorner corners,
                                AKDrawnBorderSides drawnBorders,

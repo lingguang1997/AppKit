@@ -34,6 +34,9 @@ typedef NS_OPTIONS(NSInteger, AKGradientDirection) {
 extern const AKRoundedCorner AKRoundedCornerAll;
 extern const AKDrawnBorderSides AKDrawnBorderSidesAll;
 
+extern NSString * const AKRoundedViewGradientColorKey;
+extern NSString * const AKRoundedViewGradientLocationKey;
+
 UIImage * AKRoundedCornerImage(CGSize size,
                                AKRoundedCorner corners,
                                AKDrawnBorderSides drawnBorders,
