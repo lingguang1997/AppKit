@@ -57,6 +57,7 @@
 		CE57D4A81C4391FA00DB72C4 /* AKCollectionViewPinterestLayoutController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D4921C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.h */; };
 		CE57D4A91C4391FA00DB72C4 /* AKCollectionViewController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D4961C4389DA00DB72C4 /* AKCollectionViewController.h */; };
 		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
+		CEE9509B1C68128500070821 /* Utils.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CEE9509A1C68126F00070821 /* Utils.h */; };
 		CEF1F5C71C55EF840062B243 /* AKStepBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1F5C61C55EF840062B243 /* AKStepBar.m */; };
 		CEF1F5C81C55EF840062B243 /* AKStepBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1F5C61C55EF840062B243 /* AKStepBar.m */; };
 		CEF1F5C91C5A6E460062B243 /* AKStepBar.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CEF1F5C51C55EF840062B243 /* AKStepBar.h */; };
@@ -79,6 +80,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CEE9509B1C68128500070821 /* Utils.h in Copy Files (8 items) */,
 				CE1DB22A1C61C6F200D75D05 /* AKRoundedView.h in Copy Files (8 items) */,
 				CEF1F5C91C5A6E460062B243 /* AKStepBar.h in Copy Files (8 items) */,
 				CE00E0DB1C4878EC00E7474D /* NSTimer+AKBlocksSupport.h in Copy Files (8 items) */,
@@ -146,6 +148,7 @@
 		CE57D4931C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewPinterestLayoutController.m; sourceTree = "<group>"; };
 		CE57D4961C4389DA00DB72C4 /* AKCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCollectionViewController.h; sourceTree = "<group>"; };
 		CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewController.m; sourceTree = "<group>"; };
+		CEE9509A1C68126F00070821 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		CEF1F5C51C55EF840062B243 /* AKStepBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStepBar.h; sourceTree = "<group>"; };
 		CEF1F5C61C55EF840062B243 /* AKStepBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStepBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,6 +286,7 @@
 				CE57CD1B1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m */,
 				CE46E85B1C324B890075CA29 /* NSString+AKDrawing.h */,
 				CE46E85C1C324B890075CA29 /* NSString+AKDrawing.m */,
+				CEE9509A1C68126F00070821 /* Utils.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
