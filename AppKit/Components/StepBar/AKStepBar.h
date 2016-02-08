@@ -12,9 +12,7 @@
 
 @property (nonatomic) NSInteger steps;
 @property (nonatomic) NSInteger currentStep;
-@property (nonatomic, nonnull) UIColor *backgroundColor;
 @property (nonatomic, nonnull) UIColor *highlightColor;
-
 
 + (nonnull UIColor *)defaultBackgroundColor;
 + (nonnull UIColor *)defaultHighlightColor;
