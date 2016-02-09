@@ -48,16 +48,30 @@
     }
 }
 
-- (void)previousStep {
-    assert(_currentStep);
-    _currentStep--;
-    [self setNeedsLayout];
+- (BOOL)canGoPreviousStep {
+    return !!_currentStep;
 }
 
-- (void)nextStep {
-    assert(_currentStep < _steps);
-    _currentStep++;
-    [self setNeedsLayout];
+- (BOOL)canGoNextStep {
+    return _currentStep < _steps - 1;
+}
+
+- (BOOL)previousStep {
+    if ([self canGoPreviousStep]) {
+        _currentStep--;
+        [self setNeedsLayout];
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)nextStep {
+    if ([self canGoNextStep]) {
+        _currentStep++;
+        [self setNeedsLayout];
+        return YES;
+    }
+    return NO;
 }
 
 - (void)layoutSubviews {

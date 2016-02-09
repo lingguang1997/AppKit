@@ -19,7 +19,9 @@
 
 - (nonnull instancetype)initWithSteps:(NSInteger)steps;
 - (nonnull instancetype)initWithFrame:(CGRect)frame steps:(NSInteger)steps;
-- (void)previousStep;
-- (void)nextStep;
+- (BOOL)canGoPreviousStep;
+- (BOOL)canGoNextStep;
+- (BOOL)previousStep;
+- (BOOL)nextStep;
 
 @end
