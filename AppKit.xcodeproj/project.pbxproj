@@ -56,6 +56,8 @@
 		CE57D4A71C4391FA00DB72C4 /* AKCollectionViewLineLayoutController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D48E1C43829A00DB72C4 /* AKCollectionViewLineLayoutController.h */; };
 		CE57D4A81C4391FA00DB72C4 /* AKCollectionViewPinterestLayoutController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D4921C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.h */; };
 		CE57D4A91C4391FA00DB72C4 /* AKCollectionViewController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D4961C4389DA00DB72C4 /* AKCollectionViewController.h */; };
+		CE5FEED61C69BFB20046045F /* NSString+AKContent.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5FEED51C69BFB20046045F /* NSString+AKContent.m */; };
+		CE5FEED71C69BFD20046045F /* NSString+AKContent.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE5FEED41C69BFB20046045F /* NSString+AKContent.h */; };
 		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
 		CEE9509B1C68128500070821 /* Utils.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CEE9509A1C68126F00070821 /* Utils.h */; };
 		CEF1F5C71C55EF840062B243 /* AKStepBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1F5C61C55EF840062B243 /* AKStepBar.m */; };
@@ -80,6 +82,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CE5FEED71C69BFD20046045F /* NSString+AKContent.h in Copy Files (8 items) */,
 				CEE9509B1C68128500070821 /* Utils.h in Copy Files (8 items) */,
 				CE1DB22A1C61C6F200D75D05 /* AKRoundedView.h in Copy Files (8 items) */,
 				CEF1F5C91C5A6E460062B243 /* AKStepBar.h in Copy Files (8 items) */,
@@ -148,6 +151,8 @@
 		CE57D4931C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewPinterestLayoutController.m; sourceTree = "<group>"; };
 		CE57D4961C4389DA00DB72C4 /* AKCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKCollectionViewController.h; sourceTree = "<group>"; };
 		CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewController.m; sourceTree = "<group>"; };
+		CE5FEED41C69BFB20046045F /* NSString+AKContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AKContent.h"; sourceTree = "<group>"; };
+		CE5FEED51C69BFB20046045F /* NSString+AKContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AKContent.m"; sourceTree = "<group>"; };
 		CEE9509A1C68126F00070821 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		CEF1F5C51C55EF840062B243 /* AKStepBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStepBar.h; sourceTree = "<group>"; };
 		CEF1F5C61C55EF840062B243 /* AKStepBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStepBar.m; sourceTree = "<group>"; };
@@ -284,6 +289,8 @@
 			children = (
 				CE57CD1A1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.h */,
 				CE57CD1B1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m */,
+				CE5FEED41C69BFB20046045F /* NSString+AKContent.h */,
+				CE5FEED51C69BFB20046045F /* NSString+AKContent.m */,
 				CE46E85B1C324B890075CA29 /* NSString+AKDrawing.h */,
 				CE46E85C1C324B890075CA29 /* NSString+AKDrawing.m */,
 				CEE9509A1C68126F00070821 /* Utils.h */,
@@ -410,6 +417,7 @@
 				CE57CD171C2C3CF600C584D4 /* AKStream.m in Sources */,
 				CEF1F5C71C55EF840062B243 /* AKStepBar.m in Sources */,
 				CE57CCB91C295C7800C584D4 /* AKTableViewCellAdapterCache.m in Sources */,
+				CE5FEED61C69BFB20046045F /* NSString+AKContent.m in Sources */,
 				CE46E85D1C324B890075CA29 /* NSString+AKDrawing.m in Sources */,
 				CE57CCB81C295C7800C584D4 /* AKTableViewCellAdapter.m in Sources */,
 				CE00E0D61C47B8A900E7474D /* AKTableViewSectionController.m in Sources */,
