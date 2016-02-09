@@ -11,7 +11,7 @@
 @implementation NSString (AKContent)
 
 - (BOOL)isNumber {
-    return [self rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]].location == NSNotFound;
+    return self.length && [self rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]].location == NSNotFound;
 }
 
 @end
