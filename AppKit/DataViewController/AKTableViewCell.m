@@ -176,4 +176,13 @@ static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPa
     _groupBorderLayer.path = nil;
 }
 
+- (UITableView *)tableView {
+    for (UIView *view = [self superview]; view != nil; view = [view superview]) {
+        if ([view isKindOfClass:[UITableView class]]) {
+            return (UITableView *)view;
+        }
+    }
+    return nil;
+}
+
 @end

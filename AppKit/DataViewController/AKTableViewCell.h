@@ -31,4 +31,6 @@ typedef NS_ENUM(NSInteger, AKTableViewCellGroupStyle) {
 
 + (CGFloat)heightForItem:(nonnull id)item groupStyle:(AKTableViewCellGroupStyle)groupStyle seperatorEnabled:(BOOL)seperatorEnabled fixedWidth:(CGFloat)fixedWidth;
 
+- (UITableView *)tableView;
+
 @end
