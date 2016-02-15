@@ -8,6 +8,7 @@
 
 #import "AKDataModule.h"
 #import "AKDataViewController.h"
+#import "AKStringCellAdapter.h"
 #import "AKTableViewCell.h"
 #import "AKTableViewCellAdapter.h"
 #import "AKTableViewCellAdapterCache.h"
@@ -26,6 +27,7 @@
     self = [super init];
     if (self) {
         _cache = [AKTableViewCellAdapterCache new];
+        [self registerAdapter:[AKStringCellAdapter new] forItemClass:[NSString class]];
     }
     return self;
 }

@@ -58,6 +58,10 @@
 		CE57D4A91C4391FA00DB72C4 /* AKCollectionViewController.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57D4961C4389DA00DB72C4 /* AKCollectionViewController.h */; };
 		CE5FEED61C69BFB20046045F /* NSString+AKContent.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5FEED51C69BFB20046045F /* NSString+AKContent.m */; };
 		CE5FEED71C69BFD20046045F /* NSString+AKContent.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE5FEED41C69BFB20046045F /* NSString+AKContent.h */; };
+		CE6CAFCE1C714F060068BBC1 /* AKStringCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFCD1C714F060068BBC1 /* AKStringCellAdapter.m */; };
+		CE6CAFCF1C714F060068BBC1 /* AKStringCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFCD1C714F060068BBC1 /* AKStringCellAdapter.m */; };
+		CE6CAFD21C714F150068BBC1 /* AKStringCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFD11C714F150068BBC1 /* AKStringCell.m */; };
+		CE6CAFD31C714F150068BBC1 /* AKStringCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFD11C714F150068BBC1 /* AKStringCell.m */; };
 		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
 		CEE9509B1C68128500070821 /* Utils.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CEE9509A1C68126F00070821 /* Utils.h */; };
 		CEF1F5C71C55EF840062B243 /* AKStepBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1F5C61C55EF840062B243 /* AKStepBar.m */; };
@@ -153,6 +157,10 @@
 		CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKCollectionViewController.m; sourceTree = "<group>"; };
 		CE5FEED41C69BFB20046045F /* NSString+AKContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AKContent.h"; sourceTree = "<group>"; };
 		CE5FEED51C69BFB20046045F /* NSString+AKContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AKContent.m"; sourceTree = "<group>"; };
+		CE6CAFCC1C714F060068BBC1 /* AKStringCellAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStringCellAdapter.h; sourceTree = "<group>"; };
+		CE6CAFCD1C714F060068BBC1 /* AKStringCellAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStringCellAdapter.m; sourceTree = "<group>"; };
+		CE6CAFD01C714F150068BBC1 /* AKStringCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStringCell.h; sourceTree = "<group>"; };
+		CE6CAFD11C714F150068BBC1 /* AKStringCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStringCell.m; sourceTree = "<group>"; };
 		CEE9509A1C68126F00070821 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		CEF1F5C51C55EF840062B243 /* AKStepBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStepBar.h; sourceTree = "<group>"; };
 		CEF1F5C61C55EF840062B243 /* AKStepBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStepBar.m; sourceTree = "<group>"; };
@@ -249,6 +257,8 @@
 		CE57CCAE1C295C7800C584D4 /* DataViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CE6CAFCA1C714ED10068BBC1 /* DefaultCells */,
+				CE6CAFCB1C714ED10068BBC1 /* DefaultAdapters */,
 				CE0E84EB1C311D9400D9F70A /* AKCell.h */,
 				CE00E0DA1C48075E00E7474D /* AKDataModule.h */,
 				CE57CCAF1C295C7800C584D4 /* AKDataViewController.h */,
@@ -313,6 +323,24 @@
 				CE57D4971C4389DA00DB72C4 /* AKCollectionViewController.m */,
 			);
 			path = CollectionViews;
+			sourceTree = "<group>";
+		};
+		CE6CAFCA1C714ED10068BBC1 /* DefaultCells */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CAFD01C714F150068BBC1 /* AKStringCell.h */,
+				CE6CAFD11C714F150068BBC1 /* AKStringCell.m */,
+			);
+			path = DefaultCells;
+			sourceTree = "<group>";
+		};
+		CE6CAFCB1C714ED10068BBC1 /* DefaultAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CAFCC1C714F060068BBC1 /* AKStringCellAdapter.h */,
+				CE6CAFCD1C714F060068BBC1 /* AKStringCellAdapter.m */,
+			);
+			path = DefaultAdapters;
 			sourceTree = "<group>";
 		};
 		CEF1F5C41C55EF700062B243 /* StepBar */ = {
@@ -412,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6CAFD21C714F150068BBC1 /* AKStringCell.m in Sources */,
 				CE57D4901C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m in Sources */,
 				CE57D4941C43899800DB72C4 /* AKCollectionViewPinterestLayoutController.m in Sources */,
 				CE57CD171C2C3CF600C584D4 /* AKStream.m in Sources */,
@@ -422,6 +451,7 @@
 				CE57CCB81C295C7800C584D4 /* AKTableViewCellAdapter.m in Sources */,
 				CE00E0D61C47B8A900E7474D /* AKTableViewSectionController.m in Sources */,
 				CE57CCB71C295C7800C584D4 /* AKDataViewController.m in Sources */,
+				CE6CAFCE1C714F060068BBC1 /* AKStringCellAdapter.m in Sources */,
 				CE1DB2291C6114F800D75D05 /* AKRoundedView.m in Sources */,
 				CE57CD1C1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */,
 				CE00E0D01C47997100E7474D /* AKTableViewCell.m in Sources */,
@@ -441,6 +471,8 @@
 				CE57CCBD1C295C8200C584D4 /* AKTableViewCellAdapterCache.m in Sources */,
 				CE57CCBC1C295C8200C584D4 /* AKTableViewCellAdapter.m in Sources */,
 				CE57D44E1C43553D00DB72C4 /* AKCollectionViewLineLayout.m in Sources */,
+				CE6CAFD31C714F150068BBC1 /* AKStringCell.m in Sources */,
+				CE6CAFCF1C714F060068BBC1 /* AKStringCellAdapter.m in Sources */,
 				CE57CD1D1C2CBC5B00C584D4 /* NSTimer+AKBlocksSupport.m in Sources */,
 				CE57D4911C43829A00DB72C4 /* AKCollectionViewLineLayoutController.m in Sources */,
 				CE57CCBB1C295C8200C584D4 /* AKDataViewController.m in Sources */,
