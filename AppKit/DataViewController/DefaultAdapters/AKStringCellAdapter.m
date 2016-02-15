@@ -16,8 +16,12 @@
 
 }
 
-- (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item groupStyle:(AKTableViewCellGroupStyle)groupStyle seperatorEnabled:(BOOL)seperatorEnabled heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+- (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(NSString *)item groupStyle:(AKTableViewCellGroupStyle)groupStyle seperatorEnabled:(BOOL)seperatorEnabled heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (item.length) {
+        return 44;
+    } else {
+        return 12;
+    }
 }
 
 @end
