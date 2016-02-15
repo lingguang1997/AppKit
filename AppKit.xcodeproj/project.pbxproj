@@ -62,6 +62,7 @@
 		CE6CAFCF1C714F060068BBC1 /* AKStringCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFCD1C714F060068BBC1 /* AKStringCellAdapter.m */; };
 		CE6CAFD21C714F150068BBC1 /* AKStringCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFD11C714F150068BBC1 /* AKStringCell.m */; };
 		CE6CAFD31C714F150068BBC1 /* AKStringCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6CAFD11C714F150068BBC1 /* AKStringCell.m */; };
+		CE6CB0041C7277BE0068BBC1 /* AKDynamicHeightView.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE6CB0031C7277470068BBC1 /* AKDynamicHeightView.h */; };
 		CE8BA1691C2D6A5B009CAD86 /* AKStream.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CE57CD151C2C3CF600C584D4 /* AKStream.h */; };
 		CEE9509B1C68128500070821 /* Utils.h in Copy Files (8 items) */ = {isa = PBXBuildFile; fileRef = CEE9509A1C68126F00070821 /* Utils.h */; };
 		CEF1F5C71C55EF840062B243 /* AKStepBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF1F5C61C55EF840062B243 /* AKStepBar.m */; };
@@ -86,6 +87,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CE6CB0041C7277BE0068BBC1 /* AKDynamicHeightView.h in Copy Files (8 items) */,
 				CE5FEED71C69BFD20046045F /* NSString+AKContent.h in Copy Files (8 items) */,
 				CEE9509B1C68128500070821 /* Utils.h in Copy Files (8 items) */,
 				CE1DB22A1C61C6F200D75D05 /* AKRoundedView.h in Copy Files (8 items) */,
@@ -161,6 +163,7 @@
 		CE6CAFCD1C714F060068BBC1 /* AKStringCellAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStringCellAdapter.m; sourceTree = "<group>"; };
 		CE6CAFD01C714F150068BBC1 /* AKStringCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStringCell.h; sourceTree = "<group>"; };
 		CE6CAFD11C714F150068BBC1 /* AKStringCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStringCell.m; sourceTree = "<group>"; };
+		CE6CB0031C7277470068BBC1 /* AKDynamicHeightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKDynamicHeightView.h; sourceTree = "<group>"; };
 		CEE9509A1C68126F00070821 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		CEF1F5C51C55EF840062B243 /* AKStepBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKStepBar.h; sourceTree = "<group>"; };
 		CEF1F5C61C55EF840062B243 /* AKStepBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKStepBar.m; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 			children = (
 				CE1DB2271C6114F800D75D05 /* AKRoundedView.h */,
 				CE1DB2281C6114F800D75D05 /* AKRoundedView.m */,
+				CE6CB0031C7277470068BBC1 /* AKDynamicHeightView.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
