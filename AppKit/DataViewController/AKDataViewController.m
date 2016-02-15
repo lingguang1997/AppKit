@@ -130,7 +130,7 @@ static NSString * const kDefaultSectionControllerKey = @"DefaultSectionControlle
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [tableView beginUpdates];
         [[self stream].items removeObjectAtIndex:indexPath.section];
-        [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationTop];
         [tableView endUpdates];
     }
 }
