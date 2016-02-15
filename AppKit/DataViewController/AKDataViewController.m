@@ -126,6 +126,15 @@ static NSString * const kDefaultSectionControllerKey = @"DefaultSectionControlle
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [tableView beginUpdates];
+        [[self stream].items removeObjectAtIndex:indexPath.section];
+        [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView endUpdates];
+    }
+}
+
 # pragma mark - AKStream
 
 - (void)streamDidUpdate {
