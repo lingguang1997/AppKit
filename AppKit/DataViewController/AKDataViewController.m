@@ -170,7 +170,7 @@ static NSString * const kDefaultSectionControllerKey = @"DefaultSectionControlle
     } else if ([section conformsToProtocol:@protocol(AKDataModule)]) {
         item = section;
     }
-    return _moduleDict[[item class]];
+    return _moduleDict[[item isEqual:kDefaultSectionControllerKey] ? item : [item class]];
 }
 
 - (NSArray *)_items {
