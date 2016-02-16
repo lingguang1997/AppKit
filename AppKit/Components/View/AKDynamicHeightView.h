@@ -13,7 +13,7 @@
 
 @protocol AKDynamicHeightView <NSObject>
 
-- (CGFloat)heightWithItem:(id)item;
++ (CGFloat)heightWithItem:(id)item;
 
 @end
 
