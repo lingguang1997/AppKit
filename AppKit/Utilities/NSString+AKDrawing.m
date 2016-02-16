@@ -22,7 +22,7 @@
 }
 
 - (CGFloat)ak_WidthWithFont:(UIFont *)font fixedHeight:(CGFloat)fixedHeight {
-    return CGRectGetHeight([self ak_boundingRectWithFont:font size:CGSizeMake(MAXFLOAT, fixedHeight)]);
+    return CGRectGetWidth([self ak_boundingRectWithFont:font size:CGSizeMake(MAXFLOAT, fixedHeight)]);
 }
 
 @end
