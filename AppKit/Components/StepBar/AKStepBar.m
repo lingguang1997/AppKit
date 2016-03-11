@@ -18,16 +18,35 @@
 
 - (instancetype)initWithFrame:(CGRect)frame steps:(NSInteger)steps {
     assert(steps);
-    self = [super initWithFrame:frame];
+    self = [self initWithFrame:frame];
     if (self) {
         self.steps = steps;
-        _currentStep = 0;
-        self.backgroundColor = [AKStepBar defaultBackgroundColor];
-        _highlightStepLayer = [CALayer new];
-        _highlightStepLayer.backgroundColor = [AKStepBar defaultHighlightColor].CGColor;
-        [self.layer addSublayer:_highlightStepLayer];
     }
     return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self _commentInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self _commentInit];
+    }
+    return self;
+}
+
+- (void)_commentInit {
+    _currentStep = 0;
+    self.backgroundColor = [AKStepBar defaultBackgroundColor];
+    _highlightStepLayer = [CALayer new];
+    _highlightStepLayer.backgroundColor = [AKStepBar defaultHighlightColor].CGColor;
+    [self.layer addSublayer:_highlightStepLayer];
 }
 
 - (instancetype)initWithSteps:(NSInteger)steps {
@@ -38,6 +57,7 @@
     if (_steps != steps) {
         assert(steps);
         _steps = steps;
+        [self setNeedsLayout];
     }
 }
 
