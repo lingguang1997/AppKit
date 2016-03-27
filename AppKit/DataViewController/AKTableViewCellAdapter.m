@@ -27,4 +27,8 @@
     // should be overridden
 }
 
+- (BOOL)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item seperatorForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
 @end

@@ -42,7 +42,8 @@
 - (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     AKTableViewCellAdapter *adapter = [self _adapterForItem:item];
     AKTableViewCellGroupStyle groupStyle = [self dataViewController:dataViewController item:item groupStyleForRowAtIndexPath:indexPath];
-    return [adapter dataViewController:dataViewController item:item groupStyle:groupStyle seperatorEnabled:YES heightForRowAtIndexPath:indexPath];
+    BOOL seperatorEnabled = [self dataViewController:dataViewController item:item seperatorForRowAtIndexPath:indexPath];
+    return [adapter dataViewController:dataViewController item:item groupStyle:groupStyle seperatorEnabled:seperatorEnabled heightForRowAtIndexPath:indexPath];
 }
 
 - (AKTableViewCell *)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item cellForRowAtIndexPath:(NSIndexPath *)indexPath {
