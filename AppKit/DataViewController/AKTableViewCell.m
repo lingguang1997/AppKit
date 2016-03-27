@@ -34,15 +34,14 @@ static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPa
         self.groupBorderColor = [UIColor colorWithRed:216.0 / 255 green:217.0 / 255 blue:218.0 / 255 alpha:1];
         self.groupOuterColor = [UIColor colorWithRed:245.0 / 255 green:246.0 / 255 blue:247.0 / 255 alpha:1];
         self.groupInnerColor = [UIColor whiteColor];
+        UIView *backgroundView = [[UIView alloc] initWithFrame:self.bounds];
+        [backgroundView.layer addSublayer:_groupBorderLayer];
+        self.backgroundView = backgroundView;
 
         _seperatorLayer = [CALayer new];
         _seperatorLayer.backgroundColor = self.groupBorderColor.CGColor;
         _seperatorEnabled = YES;
-
-        UIView *backgroundView = [[UIView alloc] initWithFrame:self.bounds];
-        [backgroundView.layer addSublayer:_groupBorderLayer];
-        [backgroundView.layer addSublayer:_seperatorLayer];
-        self.backgroundView = backgroundView;
+        [self.contentView.layer addSublayer:_seperatorLayer];
 
         self.backgroundColor = [UIColor colorWithRed:245.0 / 255 green:246.0 / 255 blue:247.0 / 255 alpha:1];
 
@@ -110,15 +109,17 @@ static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPa
     CGFloat seperatorHeight = [self seperatorHeight];
     switch (groupStyle) {
         case AKTableViewCellGroupStyleTop:
-            return innerHeight + groupBorderWidth + seperatorHeight;
+            return innerHeight + groupBorderWidth + ((seperatorEnabled) ? seperatorHeight : 0);
         case AKTableViewCellGroupStyleMiddle:
-            return innerHeight + seperatorHeight;
+        case AKTableViewCellGroupStyleNone:
+            return innerHeight + ((seperatorEnabled) ? seperatorHeight : 0);
         case AKTableViewCellGroupStyleBottom:
             return innerHeight + groupBorderWidth;
         case AKTableViewCellGroupStyleTopAndBottom:
             return innerHeight + groupBorderWidth + groupBorderWidth;
         default:
-            return innerHeight;
+            assert(0);
+            break;
     }
 }
 
@@ -126,7 +127,7 @@ static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPa
     [super layoutSubviews];
 
     _groupBorderLayer.hidden = (_groupStyle == AKTableViewCellGroupStyleNone);
-    _seperatorLayer.hidden = !(_seperatorEnabled && (_groupStyle == AKTableViewCellGroupStyleTop || _groupStyle == AKTableViewCellGroupStyleMiddle));
+    _seperatorLayer.hidden = !(_seperatorEnabled && (_groupStyle == AKTableViewCellGroupStyleTop || _groupStyle == AKTableViewCellGroupStyleMiddle || _groupStyle == AKTableViewCellGroupStyleNone));
 
     if (!_groupBorderLayer.hidden) {
         CGMutablePathRef path = CGPathCreateMutable();
@@ -168,11 +169,16 @@ static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPa
         CGPathRelease(path);
         CGFloat seperatorHeight = [[self class] seperatorHeight];
         _seperatorLayer.frame = CGRectMake(kSeperatorHPadding, CGRectGetHeight(contentViewFrame) - seperatorHeight, CGRectGetWidth(self.bounds) - kSeperatorHPadding - kSeperatorHPadding, seperatorHeight);
+    } else if (!_seperatorLayer.hidden) {
+        CGRect contentViewFrame = CGRectInset(self.bounds, kSeperatorHPadding, 0);
+        CGFloat seperatorHeight = [[self class] seperatorHeight];
+        _seperatorLayer.frame = CGRectMake(kSeperatorHPadding, CGRectGetHeight(contentViewFrame) - seperatorHeight, CGRectGetWidth(self.bounds) - kSeperatorHPadding - kSeperatorHPadding, seperatorHeight);
     }
 }
 
 - (void)prepareForReuse {
     _groupBorderLayer.hidden = YES;
+    _seperatorLayer.hidden = YES;
     _groupBorderLayer.path = nil;
 }
 
