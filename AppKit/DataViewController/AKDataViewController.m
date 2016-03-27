@@ -122,6 +122,7 @@ static NSString * const kDefaultSectionControllerKey = @"DefaultSectionControlle
         cell = [sectionController dataViewController:self item:item cellForRowAtIndexPath:indexPath];
     }
     cell.groupStyle = [sectionController dataViewController:self item:item groupStyleForRowAtIndexPath:indexPath];
+    cell.seperatorEnabled = [sectionController dataViewController:self item:item seperatorForRowAtIndexPath:indexPath];
     [cell updateWithItem:item];
     return cell;
 }
