@@ -74,6 +74,11 @@
     return AKTableViewCellGroupStyleNone;
 }
 
+- (BOOL)dataViewController:(AKDataViewController *)dataViewController item:(id<NSObject>)item seperatorForRowAtIndexPath:(NSIndexPath *)indexPath {
+    AKTableViewCellAdapter *adapter = [self _adapterForItem:item];
+    return [adapter dataViewController:dataViewController item:item seperatorForRowAtIndexPath:indexPath];
+}
+
 # pragma mark - Private methods
 
 - (AKTableViewCellAdapter *)_adapterForItem:(id)item {

@@ -16,7 +16,7 @@
 
 @interface AKCollectionViewLineLayout : UICollectionViewFlowLayout
 
-@property (nonatomic, weak) id<AKCollectionViewLineLayoutDelegate> delegate;
+@property (nonatomic, weak, nullable) id<AKCollectionViewLineLayoutDelegate> delegate;
 @property (nonatomic) CGFloat zoomFactor;
 @property (nonatomic) BOOL zoomAllowed;
 @property (nonatomic) CGFloat spacing;

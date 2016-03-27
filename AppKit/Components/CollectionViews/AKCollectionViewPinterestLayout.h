@@ -25,7 +25,7 @@
 
 @interface AKCollectionViewPinterestLayout : UICollectionViewLayout
 
-@property (nonatomic, weak) id<AKCollectionViewPinterestLayoutDelegate> delegate;
+@property (nonatomic, weak, nullable) id<AKCollectionViewPinterestLayoutDelegate> delegate;
 @property (nonatomic) NSInteger numberOfColumns;
 
 - (nonnull instancetype)initWithDelegate:(nonnull id<AKCollectionViewPinterestLayoutDelegate>)delegate;
