@@ -24,4 +24,8 @@
     }
 }
 
+- (BOOL)dataViewController:(AKDataViewController *)dataViewController item:(NSString *)item seperatorForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return !!item.length;
+}
+
 @end

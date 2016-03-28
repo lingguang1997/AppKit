@@ -12,7 +12,7 @@ static CGFloat const kGroupBorderWidth = 1;
 static CGFloat const kGroupBorderCornerRadius = 5;
 static CGFloat const kGroupBorderHPadding = 15;
 static CGFloat const kSeperatorHeight = 1;
-static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPadding;
+static CGFloat const kSeperatorHPadding = kGroupBorderHPadding;
 
 @interface AKTableViewCell ()
 
@@ -29,7 +29,7 @@ static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPa
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _groupBorderLayer = [CAShapeLayer new];
-        _groupBorderCornerRadius = kGroupBorderCornerRadius;
+        _groupBorderCornerRadius = [[self class] groupBorderCornerRadius];
         _groupBorderHPadding = kGroupBorderHPadding;
         self.groupBorderColor = [UIColor colorWithRed:216.0 / 255 green:217.0 / 255 blue:218.0 / 255 alpha:1];
         self.groupOuterColor = [UIColor colorWithRed:245.0 / 255 green:246.0 / 255 blue:247.0 / 255 alpha:1];
@@ -103,10 +103,15 @@ static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPa
     return kSeperatorHeight;
 }
 
++ (CGFloat)groupBorderCornerRadius {
+    return kGroupBorderCornerRadius;
+}
+
 + (CGFloat)heightForItem:(id)item groupStyle:(AKTableViewCellGroupStyle)groupStyle seperatorEnabled:(BOOL)seperatorEnabled fixedWidth:(CGFloat)fixedWidth {
     CGFloat innerHeight = [self heightForItem:item fixedWidth:fixedWidth];
     CGFloat groupBorderWidth = [self groupBorderWidth];
     CGFloat seperatorHeight = [self seperatorHeight];
+    CGFloat groupBorderCornerRadius = [self groupBorderCornerRadius];
     switch (groupStyle) {
         case AKTableViewCellGroupStyleTop:
             return innerHeight + groupBorderWidth + ((seperatorEnabled) ? seperatorHeight : 0);
@@ -141,6 +146,7 @@ static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPa
                 adjustedRect.size.height += (groupBorderWidth + _groupBorderCornerRadius);
                 CGPathAddRoundedRect(path, NULL, adjustedRect, _groupBorderCornerRadius, _groupBorderCornerRadius);
                 contentViewFrame.origin.y = groupBorderWidth;
+                contentViewFrame.size.height -= groupBorderWidth;
                 break;
             case AKTableViewCellGroupStyleMiddle:
                 adjustedRect.origin.y -= groupBorderWidth / 2;
@@ -168,11 +174,11 @@ static CGFloat const kSeperatorHPadding = kGroupBorderHPadding + kGroupBorderHPa
         _groupBorderLayer.path = path;
         CGPathRelease(path);
         CGFloat seperatorHeight = [[self class] seperatorHeight];
-        _seperatorLayer.frame = CGRectMake(kSeperatorHPadding, CGRectGetHeight(contentViewFrame) - seperatorHeight, CGRectGetWidth(self.bounds) - kSeperatorHPadding - kSeperatorHPadding, seperatorHeight);
+        _seperatorLayer.frame = CGRectMake(kSeperatorHPadding, CGRectGetHeight(contentViewFrame) - seperatorHeight, CGRectGetWidth(contentViewFrame) - kSeperatorHPadding - kSeperatorHPadding, seperatorHeight);
     } else if (!_seperatorLayer.hidden) {
         CGRect contentViewFrame = CGRectInset(self.bounds, kSeperatorHPadding, 0);
         CGFloat seperatorHeight = [[self class] seperatorHeight];
-        _seperatorLayer.frame = CGRectMake(kSeperatorHPadding, CGRectGetHeight(contentViewFrame) - seperatorHeight, CGRectGetWidth(self.bounds) - kSeperatorHPadding - kSeperatorHPadding, seperatorHeight);
+        _seperatorLayer.frame = CGRectMake(kSeperatorHPadding, CGRectGetHeight(contentViewFrame) - seperatorHeight, CGRectGetWidth(contentViewFrame) - kSeperatorHPadding - kSeperatorHPadding, seperatorHeight);
     }
 }
 
