@@ -178,7 +178,7 @@ static CGFloat const kSeperatorHPadding = kGroupBorderHPadding;
     } else if (!_seperatorLayer.hidden) {
         CGRect contentViewFrame = CGRectInset(self.bounds, kSeperatorHPadding, 0);
         CGFloat seperatorHeight = [[self class] seperatorHeight];
-        _seperatorLayer.frame = CGRectMake(kSeperatorHPadding, CGRectGetHeight(contentViewFrame) - seperatorHeight, CGRectGetWidth(contentViewFrame) - kSeperatorHPadding - kSeperatorHPadding, seperatorHeight);
+        _seperatorLayer.frame = CGRectMake(kSeperatorHPadding, CGRectGetHeight(contentViewFrame) - seperatorHeight, CGRectGetWidth(contentViewFrame), seperatorHeight);
     }
 }
 
